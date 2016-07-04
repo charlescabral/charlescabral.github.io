@@ -1,6 +1,11 @@
 <nav>
 	<ul>
-	    <li><a class ="" href="{{site.baseurl}}/javascript.html">Javascript</a></li>
-	    <li><a class ="" href="{{site.baseurl}}/css.html">CSS</a></li>
+		{% for category in site.categories %}
+			<li>
+			    <a href="/{{ category | first | slugize }}.html">
+			        {{ category | first }}
+			    </a>
+		    </li>
+		{% endfor %}
 	</ul>
 </nav>
