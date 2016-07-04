@@ -2,7 +2,7 @@
 	<ul>
 		{% for category in site.categories %}
 			<li>
-			    <a href="/{{ category | first | slugize }}.html">
+			    <a href="{{site.baseurl}}/{{ category | first | slugize }}.html">
 			        {{ category | first }}
 			    </a>
 		    </li>
