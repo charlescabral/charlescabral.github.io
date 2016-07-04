@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 ---
 
 <!--[if lt IE 7]>
@@ -7,4 +7,14 @@ layout: default
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<p>Home</p>
+
+<strong>Javascript</strong>
+
+<ul>
+    {% for blog in site.categories.javascript %}
+        <li>
+            <a href="">{{blog.title}}</a>
+            <p>{{blog.meta}}</p>
+        </li>
+    {% endfor %}
+</ul>
