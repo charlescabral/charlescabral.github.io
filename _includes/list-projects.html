@@ -1,0 +1,12 @@
+<ul>
+	{% for portfolio in site.pages %}
+		{% if portfolio.type == include.type %}
+			<li>
+				<a href="{{site.baseurl}}{{portfolio.url}}">
+					<h3>{{portfolio.title}}</h3>
+					<img src="{{site.baseurl}}/assets/img/{{portfolio.image}}" alt="">
+				</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>

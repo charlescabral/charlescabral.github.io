@@ -1,3 +1,4 @@
 markdown: kramdown
 baseurl: /charlescabral.in
 exclude: ['README.md']
+permalink: /blog/:title/

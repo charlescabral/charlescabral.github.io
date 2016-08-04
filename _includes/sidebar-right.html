@@ -3,13 +3,6 @@
 		<li><a class="{% if page.url contains 'javascript' %} current{% endif %}" href="{{site.baseurl}}/javascript.html">Javascript</a></li>
 		<li><a class="{% if page.url contains 'css' %} current{% endif %}" href="{{site.baseurl}}/css.html">CSS</a></li>
 	</ul>
-	<ul>
-		{% for item in site.data.list %}
-			<li>
-				{{item.title}}
-			</li>
-		{% endfor %}
-	</ul>
 </nav>
 
 

@@ -1,5 +1,17 @@
 ---
 layout: default
+title: Olá, Mundo
+priority: 1.0
+changefreq: monthly
 ---
 
-<p>Home</p>
+<h1>{{page.title}}</h1>
+
+<ul>
+	{% for recent in site.posts limit:2 %}
+		<li>
+			<a href="{{site.baseurl}}{{recent.url}}">{{recent.title}}</a>
+			<p>{{recent.meta}}</p>
+		</li>
+	{% endfor %}
+</ul>

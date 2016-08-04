@@ -1,16 +1,17 @@
 ---
-layout: post-default
-title: Post Sobre Algo
-meta: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat diam ac nunc hendrerit, id feugiat urna luctus.
-source: https://dsgn.io/thoughts/post/set-up-your-apache-server-with-ssl/
-category: css
+layout: portfolio
+title: Code Post
+meta: Pequena descrição para questões de teste
+type: code
+image: social_icons.png
+size: 400px 100px
 ---
 
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
 To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
 
-## Sample Heading
+## {{page.title}}
 
 ### Sample Heading 2
 
