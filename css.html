@@ -7,7 +7,7 @@ layout: blog
 <ul>
     {% for blog in site.categories.css %}
         <li>
-            <a href="">{{blog.title}}</a>
+            <a href="{{site.baseurl}}{{blog.url}}">{{blog.title}}</a>
             <p>{{blog.meta}}</p>
         </li>
     {% endfor %}

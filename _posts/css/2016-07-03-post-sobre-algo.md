@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post-default
 title: Post Sobre Algo
 meta: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat diam ac nunc hendrerit, id feugiat urna luctus.
 source: https://dsgn.io/thoughts/post/set-up-your-apache-server-with-ssl/
