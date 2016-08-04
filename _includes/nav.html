@@ -2,7 +2,15 @@
 	<ul>
 	    <li><a class="{% if page.url == '/' %}current{% endif %}" href="{{site.baseurl}}/">Home</a></li>
 	    <li><a class="{% if page.url contains 'about' %}current{% endif %}" href="{{site.baseurl}}/about.html">About</a></li>
-	    <li><a class="{% if page.url contains 'blog' %}current{% endif %}" href="{{site.baseurl}}/blog.html">Blog</a></li>
+	    <li>
+	    	<a class="{% if page.url contains 'blog' or 
+	    					page.url contains 'javascript' or 
+	    					page.url contains 'css' %} current{% endif %}" 
+	    		href="{{site.baseurl}}/blog.html"
+	    	>
+	    		blog
+	    	</a>
+	    </li>
 	    <li><a class="{% if page.url contains 'contact' %}current{% endif %}" href="{{site.baseurl}}/contact.html">Contact</a></li>
 	</ul>
 </nav>
