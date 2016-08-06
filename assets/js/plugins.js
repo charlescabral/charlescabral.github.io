@@ -22,5 +22,36 @@
 }());
 
 
+function workBelt() {
+  
+  $(".trigger").remove();
+  $(".return").remove();
 
-// Place any jQuery/helper plugins in here.
+  $('.thumb-unit').click(function() {
+    $('.work-belt').addClass("slided");
+    $('.work-container').show();
+  });
+  
+  $('.work-return').click(function() {
+    $('.work-belt').removeClass("slided");
+    $('.work-container').hide(800);
+  });
+
+}
+
+
+function  workLoad() {
+  
+  $.ajaxSetup({ cache: true });
+  
+  $('.thumb-unit').click(function() {
+    var $this = $(this),
+        newTitle = $this.find('strong').text(),
+        spinner = '<div class="loader">Loading...</div>',
+        filePath = $this.data('filepath');
+      
+    $('.project-load').html(spinner).load(filePath);
+    $('.project-title').text(newTitle);
+  });
+  
+}

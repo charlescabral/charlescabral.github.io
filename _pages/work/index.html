@@ -1,0 +1,22 @@
+---
+layout: work
+title: Work
+subTitle: Dicas e reflexões sobre desenvolvimento web, usabilidade e design
+folder: work
+priority: 1.0
+changefreq: monthly
+permalink: "/work/"
+---
+
+<h1>Work</h1>
+
+{% for project in site.projects %}
+	<ul>
+		<li>
+			<a href="{{site.baseurl}}{{project.url}}">
+				<h3>{{project.title}}</h3>
+				<img src="{{site.baseurl}}/assets/img/{{project.image}}" alt="">
+			</a>
+		</li>
+	</ul>
+{% endfor %}

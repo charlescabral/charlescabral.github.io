@@ -5,7 +5,7 @@ layout: default
 <ul>
 	{% for type in site.data.type-project %}
 		<li>
-			<a class="{% if page.url contains type.folder %}current{% endif %}" href="{{site.baseurl}}/portfolio/{{type.folder}}/">
+			<a class="{% if page.url contains type.folder %}current{% endif %}" href="{{site.baseurl}}/work/{{type.folder}}/">
 				{{type.title}}
 			</a>
 		</li>

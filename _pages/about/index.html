@@ -1,0 +1,30 @@
+---
+layout: default
+title: About
+priority: 1.0
+changefreq: monthly
+permalink: "/about/"
+---
+
+<h1>{{page.title}}</h1>
+
+
+{% if site.data.settings.skills %}
+
+	<h3>Skills</h3>
+	<ul class="skill-lockup">
+
+		{% for skill in site.data.settings.skills %}
+
+			<li class="skill-unit">
+				<span class="skill-label">{{ skill.name }}</span>
+				<span class="skill-level_{{ skill.value }}">
+					{{ skill.value }}
+				</span>
+			</li>
+
+		{% endfor %}
+
+	</ul>
+
+{% endif %}

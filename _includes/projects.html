@@ -1,0 +1,16 @@
+{% for project in site.projects %}
+	<ul>
+		{% if project.type == include.type %}
+			<li>
+				<a href="{{site.baseurl}}{{project.url}}">
+					<h3>{{project.title}}</h3>
+					<img src="{{site.baseurl}}/assets/img/{{project.image}}" alt="">
+				</a>
+			</li>
+		{% endif %}
+	</ul>
+{% endfor %}
+
+	
+
+

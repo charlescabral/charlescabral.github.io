@@ -1,4 +1,9 @@
 markdown: kramdown
 baseurl: /charlescabral.in
-exclude: ['README.md']
-permalink: /blog/:title/
+include: ['_pages', '_projects']
+exclude: ['README.md','vendor/bundle/ruby']
+permalink: /:title/
+collections:
+  projects:
+    output: true
+    permalink: /work/:path/

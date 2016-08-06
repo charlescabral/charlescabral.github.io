@@ -1,0 +1,37 @@
+#-------------------------------
+# General Site Settings
+
+title: Charles Cabral
+description: Frontend Developer // Web Designer
+email: charles.cabral.neto@gmail.com
+
+#-------------------------------
+# SEO Section
+  
+
+#-------------------------------
+# About Section
+
+skills:
+- {name: Communication, value: '9'}
+- {name: Organization, value: '7'}
+- {name: Learning, value: '10'}
+- {name: Teaching, value: '6'}
+- {name: Planning, value: '7'}
+- {name: Visual Design, value: '10'}
+- {name: UX Design, value: '8'}
+- {name: Programming, value: '6'}
+
+
+#-------------------------------
+# Contact Section
+
+social:
+- {icon: 'twitter', link: 'http://twitter.com/devtipsshow'}
+- {icon: 'dribbble', link: 'https://dribbble.com/travisneilson'}
+- {icon: 'behance', link: 'https://www.behance.net/travisneilson'}
+- {icon: 'youtube', link: 'https://www.youtube.com/DevTipsForDesigners'}
+- {icon: 'linkedin', link: 'http://www.linkedin.com/in/travisneilson/'}
+
+
+# social network icons available: 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' / 'behance' / 'soundcloud' / 'vine'
