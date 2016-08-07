@@ -32,6 +32,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+npm-debug.log
 
 /bower_components/
 /assets/bower/
