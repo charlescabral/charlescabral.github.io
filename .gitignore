@@ -1,3 +1,7 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
 ### OSX ###
 .DS_Store
 .AppleDouble
@@ -6,13 +10,21 @@
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -21,11 +33,13 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-node_modules
+/bower_components/
+/assets/bower/
+/node_modules/
 
 ### Jekyll ###
-_site
-_drafts
+/_site/
+/_drafts/
 
 ### Sass ###
 .sass-cache

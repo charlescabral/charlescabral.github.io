@@ -1,9 +1,28 @@
 markdown: kramdown
-baseurl: /charlescabral.in
-include: ['_pages', '_projects']
-exclude: ['README.md','vendor/bundle/ruby']
-permalink: /:title/
+baseurl: ''
+
+include: 
+  - _pages
+
+exclude:
+  - README.md
+  - vendor/bundle/ruby
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - bower.json
+  - Gemfile
+  - Gemfile.lock
+  
+permalink: /blog/:title/
+
 collections:
   projects:
     output: true
     permalink: /work/:path/
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
