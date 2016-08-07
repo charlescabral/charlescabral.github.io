@@ -2,11 +2,12 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 
-## Dependencies
+### Dependencies
 
-```sh
-npm install jshint gulp-jshint --save-dev
-```
+- Bundler
+- Jekyll
+- Gulp
+
 
 
 
