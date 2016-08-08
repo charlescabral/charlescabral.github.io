@@ -83,7 +83,7 @@ gulp.task('styles', function () {
 
 // Lint scripts
 gulp.task('lint', function () {
-    return gulp.src(['gulpfile.js', '_assets/js/**/*.js', '_assets/bower/*js'])
+    return gulp.src(['gulpfile.js', '_assets/js/**/*.js'])
         .pipe(plumber({errorHandler: onError}))
         .pipe(jshint());
 });
@@ -92,10 +92,9 @@ gulp.task('scripts', ['scripts:jquery', 'scripts:bundle']);
 
 // Compress jquery
 gulp.task('scripts:jquery', function() {
-    return gulp.src(['_assets/js/*.js','_assets/js/vendor/**/*.js'])
+    return gulp.src(['_assets/js/**/*.js'])
         .pipe(plumber({errorHandler: onError}))
         .pipe(jshint())
-        .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('assets/js'))
         .pipe(gulp.dest('_site/assets/js')); // Copy to static dir

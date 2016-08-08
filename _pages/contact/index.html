@@ -10,7 +10,7 @@ permalink: "/contact/"
 <h1>{{page.title}}</h1>
 
 <form id="contact-form" action="//getsimpleform.com/messages?form_api_token=3ae6c27587e8cc0b9bf81aa8eb3904ef" method="post">
-	<select name="title" required>
+	<select name="subject" required>
 		<option value="0" disabled selected>Assunto</option>
 		<option value="Freela">Freela</option>
 		<option value="Contrato">Contrato</option>
@@ -22,16 +22,3 @@ permalink: "/contact/"
 </form>
 
 <div class="site-alert"></div>
-
-{% comment %}<form id="contact-form" action="//formspree.io/{{site.data.settings.email}}" method="POST">
-	<select name="_subject" required>
-		<option value="0" disabled selected>Assunto</option>
-		<option value="Freela">Freela</option>
-		<option value="Contrato">Contrato</option>
-	</select><br>
-    <input type="text" name="name" required >
-    <input type="text" name="_replyto" placeholder="Email" required/>
-    <input type="hidden" name="_format" value="plain" />
-    <input type="hidden" name="_gotcha" />
-    <input type="submit" value="Send">
-</form>{% endcomment %}
