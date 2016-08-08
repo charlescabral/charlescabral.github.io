@@ -12,7 +12,6 @@ var imagemin    = require('gulp-imagemin');
 var jshint      = require('gulp-jshint');
 var uglify      = require('gulp-uglify');
 var bundler     = process.platform === 'win32' ? 'bundle.bat' : 'bundle';
-var js_bower    = ['_assets/vendor/jquery/dist/jquery.min.js']
 
 var onError = function(err) {
     notify.onError({
@@ -26,7 +25,7 @@ var onError = function(err) {
 
 gulp.task('default', ['browser-sync', 'watch']);
 gulp.task('bower', function() { return bower() });
-gulp.task('build', ['bower','clean', 'images', 'styles', 'lint', 'scripts']);
+gulp.task('build', ['clean', 'images', 'styles', 'lint', 'scripts']);
 
 gulp.task('serve', function () {
     var server = express();
@@ -77,7 +76,7 @@ gulp.task('images', function () {
 gulp.task('styles', function () {
     return gulp.src('_assets/scss/main.scss')
         .pipe(plumber({errorHandler: onError}))
-        .pipe(sass())
+        .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('assets/css'))
         .pipe(gulp.dest('_site/assets/css')); // Copy to static dir
 });
@@ -93,16 +92,17 @@ gulp.task('scripts', ['scripts:jquery', 'scripts:bundle']);
 
 // Compress jquery
 gulp.task('scripts:jquery', function() {
-    return gulp.src(['_assets/js/**/*.js', '_assets/bower/*js'])
+    return gulp.src(['_assets/js/*.js','_assets/js/vendor/**/*.js'])
         .pipe(plumber({errorHandler: onError}))
         .pipe(jshint())
+        .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('assets/js'))
         .pipe(gulp.dest('_site/assets/js')); // Copy to static dir
 });
 
 gulp.task('scripts:bundle', function() {
-    return gulp.src(['_assets/js/**/*.js',js_bower])
+    return gulp.src(['_assets/js/**/*.js'])
         .pipe(plumber({errorHandler: onError}))
         .pipe(jshint())
         .pipe(concat('bundle.js'))
