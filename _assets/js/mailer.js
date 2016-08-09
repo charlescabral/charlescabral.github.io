@@ -1,22 +1,23 @@
-var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
-function callOtherDomain() {
-  if(invocation) {    
-    invocation.open('GET', url, true);
-    invocation.onreadystatechange = handler;
-    invocation.send(); 
-  }
-}
 
 $(function() {
 	var form   = $( '#contact-form' );
 	var action = form.attr('action');
 	var alert  = $('.site-alert');
+	var invocation = new XMLHttpRequest();
+	var url = action;
+
+	function callOtherDomain() {
+	  if(invocation) {    
+	    invocation.open('GET', url, true);
+	    invocation.onreadystatechange = handler;
+	    invocation.send(); 
+	  }
+	}
 
 	form.submit(function(e) {
  		e.preventDefault();
 		if (form.valid()) {
-			new XMLHttpRequest();
+			// new XMLHttpRequest();
 			NProgress.start();
 			var values = $(this).serialize();
 			form.append('<div class="alert alert--loading">Sending message…</div>');
