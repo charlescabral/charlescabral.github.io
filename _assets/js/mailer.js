@@ -34,7 +34,6 @@ $(function() {
 		}
 		return false
 	});
-
 });
 
 $.fn.clearForm = function() {
