@@ -8,15 +8,17 @@ changefreq: monthly
 permalink: "/work/"
 ---
 
-<h1>Work</h1>
+<div class="container">
+	<h1>Work</h1>
 
-{% for project in site.projects limit:2 %}
-	<ul>
-		<li>
-			<a href="{{site.baseurl}}{{project.url}}">
-				<h3>{{project.title}}</h3>
-				<img src="{{site.baseurl}}/assets/img/{{project.image}}" alt="">
-			</a>
-		</li>
-	</ul>
-{% endfor %}
+	{% for project in site.projects limit:2 %}
+		<ul>
+			<li>
+				<a href="{{site.baseurl}}{{project.url}}">
+					<h3>{{project.title}}</h3>
+					<img src="{{site.baseurl}}/assets/img/{{project.image}}" alt="">
+				</a>
+			</li>
+		</ul>
+	{% endfor %}
+</div>

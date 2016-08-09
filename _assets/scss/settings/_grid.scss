@@ -1,0 +1,18 @@
+@import "../tools/bourbon/bourbon";
+@import "../tools/neat/neat-helpers";
+
+$visual-grid: false;
+$visual-grid-color: red;
+// $visual-grid-index: front;
+$visual-grid-opacity: 0.1; 
+
+$max-width: 1200px;
+$column: 92.5px;
+$gutter: 9px;
+$grid-columns: 12;
+
+$small: 412px;
+$medium: 768px;
+
+$mobile-screen: new-breakpoint(max-width $small 4);
+$tablet-screen: new-breakpoint(max-width $medium 8);

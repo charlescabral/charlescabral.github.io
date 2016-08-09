@@ -5,15 +5,16 @@ title: Blog
 subTitle: Dicas e reflexões sobre desenvolvimento web, usabilidade e design
 permalink: "/blog/"
 ---
+<div class="container">
+	<h1>{{page.title}}</h1>
+	<h2>{{page.subTitle}}</h2>
 
-<h1>{{page.title}}</h1>
-<h2>{{page.subTitle}}</h2>
-
-<ul>
-	{% for blog in site.posts limit:4 %}
-		<li class="{{blog.category}}">
-			<a href="{{site.baseurl}}{{blog.url}}">{{blog.title}}</a>
-			<p>{{blog.meta}}</p>
-		</li>
-	{% endfor %}
-</ul>
+	<ul>
+		{% for blog in site.posts limit:4 %}
+			<li class="{{blog.category}}">
+				<a href="{{site.baseurl}}{{blog.url}}">{{blog.title}}</a>
+				<p>{{blog.meta}}</p>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
