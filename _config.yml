@@ -2,6 +2,7 @@ markdown: kramdown
 baseurl: 
 future: true
 encoding: UTF-8
+timezone: America/Sao_Paulo
 
 include: 
   - _pages

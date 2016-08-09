@@ -1,19 +1,17 @@
+# charlescabral.in
+Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+
 ### Dependencies
 
-- [Bundler][Bundler]
-- [Jekyll][Jekyll]
-- [Gulp][Gulp]
-
----
-
-### License & Copyright
-
-[© Charles Cabral](mailto:charles.cabral.neto@gmail.com).<br>
-All *code* licensed under the [Unlicense](UNLICENSE).<br>
+- Bundler
+- Jekyll
+- Gulp
 
 
+http://bundler.io/
+https://jekyllrb.com/
+http://gulpjs.com/
 
-[Bundler]: http://bundler.io/
-[Jekyll]: https://jekyllrb.com/
-[Gulp]: http://gulpjs.com/
+
 
