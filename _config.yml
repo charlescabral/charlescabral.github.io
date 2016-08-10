@@ -16,6 +16,7 @@ exclude:
   - bower.json
   - Gemfile
   - Gemfile.lock
+  - .npmignore
   
 permalink: /blog/:title/
 
