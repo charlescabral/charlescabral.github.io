@@ -1,95 +1,53 @@
-// @font-face {
-// 	font-family: 'LGSmartLight-Light';
-// 	src: url('../font/LGSmartLight-Light.eot?#iefix') format('embedded-opentype'), 
-// 		 url('../font/LGSmartLight-Light.woff') format('woff'),
-// 		 url('../font/LGSmartLight-Light.ttf')  format('truetype'),
-// 		 url('../font/LGSmartLight-Light.svg#LGSmartLight-Light') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Roboto+Mono:400,500);
 
-// @font-face {
-// 	font-family: 'LGSmart';
-// 	src: url('../font/LGSmart.eot?#iefix') format('embedded-opentype'),
-// 		 url('../font/LGSmart.woff') format('woff'),
-// 		 url('../font/LGSmart.ttf')  format('truetype'),
-// 		 url('../font/LGSmart.svg#LGSmart') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-
-
-// @font-face {
-// 	font-family: 'LGSmartLight-SemiBold';
-// 	src: url('../font/LGSmartLight-SemiBold.eot?#iefix') format('embedded-opentype'),  
-// 		 url('../font/LGSmartLight-SemiBold.woff') format('woff'), 
-// 		 url('../font/LGSmartLight-SemiBold.ttf')  format('truetype'), 
-// 		 url('../font/LGSmartLight-SemiBold.svg#LGSmartLight-SemiBold') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'lg-icons';
-//     src:    url('../font/icons/lg-icons.eot?4zv2d7');
-//     src:    url('../font/icons/lg-icons.eot?4zv2d7#iefix') format('embedded-opentype'),
-//         url('../font/icons/lg-icons.ttf?4zv2d7') format('truetype'),
-//         url('../font/icons/lg-icons.woff?4zv2d7') format('woff'),
-//         url('../font/icons/lg-icons.svg?4zv2d7#lg-icons') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
-$font-icon:   "lg-icons";
-$font-light:   "LGSmartLight-Light", "Helvetica", "Arial", sans-serif;
-$font-regular: "LGSmart", "Helvetica", "Arial", sans-serif;
-$font-bold:    "LGSmartLight-SemiBold", "Helvetica", "Arial", sans-serif;
+$font-icon:    'lg-icons';
+$font-light:   'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+$font-regular: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+$font-meta:    'Roboto Mono', monospace;
+// $font-bold:    'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
 
 // Typography
-$base-font-family: $font-light;
+$base-font-family:    $font-regular;
 $heading-font-family: $font-regular;
-
-// Font Sizes
-$base-font-size: 1em;
+$font-btn:            $font-regular;
 
 // Line height
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
-
-
-
-@mixin ff--sans-serif($font-weight: normal) {
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: $font-weight;
-}
-
-@mixin ff--mono($font-weight: normal) {
-  font-family: 'Roboto Mono', monospace;
-  font-weight: $font-weight;
-}
-
 // Font sizing
-@mixin fs--title {
+@mixin fs-title {
   line-height: 44px;
-  font-size: 40px; // 40px
+  font-size: 40px;
+  font-family: $font-meta;
+  font-weight: 500;
 }
 
-@mixin fs--heading-1 {
+@mixin fs-subtitle {
+  line-height: 22px;
+  font-size: 20px;
+  font-family: $font-meta;
+  font-weight: 500;
+}
+
+@mixin fs-h1 {
   line-height: 39px;
-  font-size: 35px; // 35px
+  font-size: 35px;
 }
 
-@mixin fs--heading-2 {
+@mixin fs-h2 {
   line-height: 34px;
-  font-size: 30px; // 30px
+  font-size: 30px;
 }
 
-@mixin fs--body {
+@mixin fs-body {
   line-height: 20px;
-  font-size: 18px; // 18px
+  font-size: 18px;
 }
 
-@mixin fs--meta {
-  font-size: 16px; // 16px
+@mixin fs-meta {
+  font-size: 16px;
+  font-family: $font-meta;
+  font-weight: 500;
+  line-height: 18px;
 }

@@ -27,10 +27,10 @@ select {
   @include border-radius($base-border-radius);
   @include box-sizing(border-box);
   @include appearance(none);
+  @include fs-body;
   background-color: $base-background-color;
   border: $base-border;
   font-family: $base-font-family;
-  font-size: $base-font-size;
   margin-bottom: $small-spacing;
   padding: $base-spacing / 3;
   width: 100%;

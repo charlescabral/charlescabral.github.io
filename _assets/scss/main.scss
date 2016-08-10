@@ -1,17 +1,18 @@
 // Settings        ---------------------------------------- //
 @import 
-	'settings/colors',
-	'settings/grid',
-	'settings/typography',
-	'settings/units';
+	'settings/units',
+	'settings/variables',
+	'settings/typography';
 
-// Tools           ---------------------------------------- //
+// Helpers           ---------------------------------------- //
 @import 
-	'tools/mixins',
-	'tools/bourbon/bourbon',
-	'tools/neat/neat',
-	'tools/nprogress';
+	'helpers/mixins',
+	'helpers/bourbon/bourbon',
+	'helpers/neat/neat',
+	'helpers/nprogress',
+	'helpers/functional';
 // @import "tools/waves";
+
 
 // Generic         ---------------------------------------- //
 @import 
@@ -21,21 +22,23 @@
 @import 
 	'base/base';
 
+	
+
 // Components      ---------------------------------------- //
 @import
-	'components/content.scss',
-	'components/syntax-highlighting.scss',
+	'components/grid',
+	'components/syntax-highlighting',
 	'components/header',
 	'components/navigation',
 	'components/article',
 	'components/archives',
 	'components/social',
-	'components/buttons',
 	'components/footer';
 
 // Pages           ---------------------------------------- //
 @import 
-	'pages/demo';
+	'pages/styleguide',
+	'pages/contact';
 
 
 // Trump           ---------------------------------------- //

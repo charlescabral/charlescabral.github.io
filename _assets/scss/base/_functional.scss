@@ -1,7 +1,0 @@
-.container {
-	@include outer-container;
-	@include media(max-width $max-width + ($gutter*6)) {
-       margin: 0 ($gutter*2);
-    }
-}
-.full-container { @include outer-container(100%); }

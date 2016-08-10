@@ -1,3 +1,6 @@
+$base-border-color: $c-gray;
+$base-border: 1px solid $base-border-color;
+
 .button {
   @include prefixer(transition, $base-duration $base-timing, webkit moz ms o spec);
   @include border-radius($base-border-radius);
@@ -9,7 +12,7 @@
   white-space: nowrap;
   background-color: $c-light-primary;
   color: $c-txt-primary;
-  font-family: $font-bold;
+  font-family: $font-btn;
   font-size: 18px;
   height: 42px;
   line-height: 44px;

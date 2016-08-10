@@ -17,19 +17,18 @@ $(function() {
 	form.submit(function(e) {
  		e.preventDefault();
 		if (form.valid()) {
-			// new XMLHttpRequest();
-			NProgress.start();
 			var values = $(this).serialize();
-			form.append('<div class="alert alert--loading">Sending message…</div>');
-
 			$.post(action, values, function(data) {
+				NProgress.start();
 				form.clearForm();
 			}, 'json').fail(function() {
+				form.clearForm();
 				NProgress.done();
-				form.append('<div class="alert alert--success">Message sent!</div>')
+				Notify("Erro ao enviar sua mensagem", null, null, 'danger');
 			}).done(function() {
+				form.clearForm();
 				NProgress.done();
-				form.append('<div class="alert alert--success">Message sent!</div>')
+				Notify("Sua mensagem foi enviada!", null, null, 'success');
 			});
 		}
 		return false

@@ -1,26 +1,31 @@
 ---
 layout: default
-title: Olá, Mundo
+title: Charles Cabral
 priority: 1.0
 changefreq: monthly
 permalink: '/'
 ---
 
-<article class="c-article">
-  <header class="c-header c-article__header">
-    <div class="container">
-      <h1 class="c-header__title">{{ page.title }}</h1>
-    </div>
-  </header>
+<article class="article">
 
-  <div class="c-article__main">
-    <ul>
-		{% for recent in site.posts limit:2 %}
-			<li>
-				<a href="{{site.baseurl}}{{recent.url}}">{{recent.title}}</a>
-				<p>{{recent.meta}}</p>
-			</li>
-		{% endfor %}
-	</ul>
-  </div>
+    <header class="header article">
+        <div class="container">
+            <h1 class="title">{{ page.title }}</h1>
+        </div>
+    </header>
+
+    <div class="article main">
+        <section class="container">
+            <ul>
+                {% for recent in site.posts limit:2 %}
+                <li>
+                    <a href="{{site.baseurl}}{{recent.url}}">{{recent.title}}</a>
+                    <p>{{recent.meta}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+
+            Foi? e agora?
+        </section>
+    </div>
 </article>

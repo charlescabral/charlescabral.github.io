@@ -1,19 +1,32 @@
-
-// Border
-$base-border-color: $light-gray;
-$base-border: 1px solid $base-border-color;
-
-// Background Colors
-$base-background-color: #fff;
-$secondary-background-color: tint($base-border-color, 75%);
-
+$base-border-radius: 3px;
+$base-spacing: 1em;
+$small-spacing: 1em;
 
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
 
-// Other Sizes
-$base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
-$base-z-index: 0;
+
+$visual-grid: false;
+$visual-grid-color: red;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.1; 
+
+$max-width: 1200px;
+$column: 92.5px;
+$gutter: 9px;
+$grid-columns: 12;
+
+$small: 412px;
+$medium: 768px;
+
+$mobile-screen: new-breakpoint(max-width $small 4);
+$tablet-screen: new-breakpoint(max-width $medium 8);
+
+$small-screen-up:  601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up:  1201px !default;
+$small-screen:     600px !default;
+$medium-screen:    992px !default;
+$large-screen:     1200px !default;
+

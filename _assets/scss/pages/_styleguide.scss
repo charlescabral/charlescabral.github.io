@@ -1,6 +1,10 @@
-.list {
-	@include outer-container;
-	> li {
+
+
+
+
+
+.sg-grid {
+	> .col {
 		height: 60px;
 		line-height: 60px;
 		margin-bottom: $gutter;
@@ -9,51 +13,10 @@
 		color: $c-white;
 		@include border-radius(2px);
 	}
-	.one {
-		@include span-columns(1);
-		@include omega(3n);
-	}
-	.two {@include span-columns(2);}
-	.tree {
-		@include span-columns(3);
-	}
-	.four {
-		@include span-columns(4);
-		// @include omega(2n);
-	}
-	.five {
-		@include span-columns(5);
-		@include omega(2n);
-	}
-	.six {
-		@include span-columns(6);
-		@include omega(4n);
-	}
-	.seven {@include span-columns(7);}
-	.eight {@include span-columns(8);}
-	.nine {@include span-columns(9);}
-	.ten {@include span-columns(10);}
-
-	.doze {
-		@include span-columns(12);
-		.desktop {display: block;}
-		.tablet {display: none;}
-		.mobile {display: none;}
-
-		@include media($tablet-screen) {
-			.desktop {display: none;}
-			.tablet {display: block;}
-		}
-
-		@include media($mobile-screen) {
-			.mobile {display: block;}
-		}
-	}
-
-	.right {
-		@include omega();
-	}
 }
+
+
+
 
 .element {
 	$first-breakpoint-value: 400px;
@@ -98,10 +61,10 @@
 }
 .button.big {
 	@extend .-big;
-	@extend .-icon;
+	// @extend .-icon;
 	@extend .-error;
 	&:after {
-		@extend .-cart;
+		// @extend  .-cart;
 	}
 }
 .button.large {
@@ -149,23 +112,23 @@
 		@extend .-border;
 		@extend .-large;
 		// @extend .-primary;
-		@extend .-icon;
+		// @extend .-icon;
 		&:after {
-			@extend .-cart;
+			// @extend .-cart;
 		}
 	}
 }
 
 .with {
-	@extend .-icon;
+	// @extend .-icon;
 	&.-l {
 		&:before {
-			@extend .-cart;
+			// @extend .-cart;
 		}
 	}
 	&.-r {
 		&:after {
-			@extend .-cart;
+			// @extend .-cart;
 		}
 	}
 }
@@ -173,7 +136,7 @@
 .button.cart {
 	@extend .-border;
 	&:before {
-		@extend .-cart;
+		// @extend  .-cart;
 	}
 }
 

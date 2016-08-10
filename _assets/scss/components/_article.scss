@@ -1,34 +1,33 @@
-/* ==========================================================================
-   Article
-   ========================================================================== */
+.article {
 
-.c-article {
+    > .header {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+        background: $c-dark-primary;
 
-}
+        .title {
+            position: relative;
+            @include fs-title;
+            color: $c-white;
+            margin: 0;
 
-.c-article__main {
-  max-width: 76rem; // 760px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
-  @include fs--body;
+            &:after {
+                margin-left: .5rem;
+                color: rgba($c-white, .5);
+                content: '¬';
+            }
 
-  > * {
-    margin-bottom: 1.8rem;
-    color: rgba($c-black, .7);
-  }
-
-  a:not(.c-btn) {
-    text-decoration: underline;
-  }
-
-  blockquote {
-    margin-left: -2.5rem;
-    width: calc(100% + 5rem);
-    padding: 2.5rem;
-    background: $c-light-primary;
-  }
+            span {
+                color: rgba(#fff, .5);
+            }
+        }
+            
+        .subtitle {
+            @include fs-subtitle;
+            color: $c-white;
+            margin: 0;
+        }
+    }
 }
