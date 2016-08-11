@@ -1,0 +1,10 @@
+.content { padding-top: 66px; }
+
+.full-container { @include outer-container(100%); }
+.container {
+	@include clearfix;
+	@include outer-container;
+	@include media(max-width $max-width + ($gutter*6)) {
+		margin: 0 ($gutter*2);
+	}
+}

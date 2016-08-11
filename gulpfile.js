@@ -1,27 +1,29 @@
+// ============= VARS ============= //
+
 var gulp         = require('gulp');
-var cp           = require('child_process');
-var del          = require('del');
-var concat       = require('gulp-concat');
-var shell        = require('gulp-shell');
-var express      = require('express');
-var util         = require('gulp-util');
-var browser_sync = require('browser-sync');
-var plumber      = require('gulp-plumber');
-var notify       = require('gulp-notify');
-var sass         = require('gulp-sass');
-var svgmin       = require('gulp-svgmin');
-var svgSprite    = require('gulp-svg-sprite');
-var svg2png      = require('gulp-svg2png');
-var imagemin     = require('gulp-imagemin');
-var jshint       = require('gulp-jshint');
-var uglify       = require('gulp-uglify');
-var bundler      = process.platform === 'win32' ? 'bundle.bat' : 'bundle';
-var assets       = { src: '_assets/', dest: 'assets/' };
-var svg          = {
-    sprite_svg: require('gulp-svg-sprite'),
-    svg2png:   require('gulp-svg2png')
-}
-var paths       = {
+    cp           = require('child_process'),
+    del          = require('del'),
+    concat       = require('gulp-concat'),
+    shell        = require('gulp-shell'),
+    express      = require('express'),
+    util         = require('gulp-util'),
+    browser_sync = require('browser-sync'),
+    plumber      = require('gulp-plumber'),
+    notify       = require('gulp-notify'),
+    sass         = require('gulp-sass'),
+    neat         = require('node-neat').includePaths,
+    normalize    = require('node-normalize-scss').includePaths,
+    sequence     = require('gulp-sequence'),
+    svgmin       = require('gulp-svgmin'),
+    svgSprite    = require('gulp-svg-sprite'),
+    svg2png      = require('gulp-svg2png'),
+    imagemin     = require('gulp-imagemin'),
+    jshint       = require('gulp-jshint'),
+    uglify       = require('gulp-uglify'),
+    bundler      = process.platform === 'win32' ? 'bundle.bat' : 'bundle',
+    assets       = { src: '_assets/', dest: 'assets/' };
+var svg          = { sprite_svg: require('gulp-svg-sprite'), svg2png: require('gulp-svg2png') }
+var paths        = {
     img: {
         src:  assets.src + 'img/',
         dest: assets.dest + 'img/'
@@ -35,20 +37,28 @@ var paths       = {
         dest: assets.dest + 'css/'
     },
     svg: {
-        dest: assets.src + 'svg/',
-        src:  assets.src + 'svg/sprite/*.svg',
-        file: assets.src + 'svg/sprite_svg.svg',
-        css:  assets.src + 'scss/components/_sprite-svg.scss'
+        src:    assets.src + 'svg/',
+        dest:   assets.dest + 'svg/',
+        sprite: assets.src + 'svg/sprite/*.svg',
+        file:   assets.src + 'svg/sprite_svg.svg',
+        css:    assets.src + 'scss/components/_sprite-svg.scss'
     },
     templates: {
         svg:  assets.src + 'scss/template/'
     }
 };
 
+
 // ============= SERVER BUILDINGS ============= //
 
 gulp.task('default', ['browser-sync', 'watch']);
-gulp.task('build', ['clean', 'svg', 'images', 'styles', 'lint', 'scripts']);
+gulp.task('build', ['clean', 'img', 'styles', 'lint', 'scripts']);
+// gulp.task('build', sequence('clean', 'svg', 'images', 'styles', 'lint', 'scripts'));
+gulp.task('img', sequence('svg_min_all', 'sprite_svg', 'svg_min_root', 'svg_png', 'images'));
+// gulp.task('svg', ['svg_min', 'svg_png']);
+gulp.task('scripts', ['scripts:jquery', 'scripts:bundle']);
+
+// ============= //
 
 // Build Server Jekyll 
 gulp.task('serve', function () {
@@ -72,12 +82,12 @@ gulp.task('jekyll-rebuild', ['rebuild'], function () { browser_sync.reload() });
 
 // Watch
 gulp.task('watch', ['jekyll', 'serve'], function () {
-    gulp.watch(paths.scss.src + '**/*.scss', ['styles']);
-    gulp.watch(paths.js.src + '**/*.js', ['scripts']);
+    gulp.watch(paths.scss.src + '**/*.scss', ['styles', 'jekyll-rebuild']);
+    gulp.watch(paths.js.src + '**/*.js', ['scripts', 'jekyll-rebuild']);
     gulp.watch(['_pages/**/*','_projects/**/*','_posts/**/*', '_data/**/*'], ['jekyll-rebuild']);
 });
 
-// Browser_sync
+// Browser Sync
 gulp.task('browser-sync', ['jekyll', 'serve'], function() {
     browser_sync({
         server: { baseDir: '_site' }
@@ -94,20 +104,26 @@ gulp.task('clean', function (cb) {
     cb();
 });
 
-// Minify Images
-gulp.task('images', function () {
-    return gulp.src(paths.img.src + '**/*')
+
+// Minify SVG's
+gulp.task('svg_min_all', function () {
+    return gulp.src(paths.svg.src + '**/*.svg')
         .pipe(plumber({errorHandler: onError}))
-        .pipe(imagemin({
-            progressive: true
-        }))
-        .pipe(gulp.dest(paths.img.src))
-        .pipe(gulp.dest(paths.img.dest));
+        .pipe(svgmin())
+        .pipe(gulp.dest(paths.svg.src));
+});
+
+// Minify SVG's
+gulp.task('svg_min_root', function () {
+    return gulp.src(paths.svg.src + '*.svg')
+        .pipe(plumber({errorHandler: onError}))
+        .pipe(svgmin())
+        .pipe(gulp.dest(paths.svg.dest));
 });
 
 // Make Sprite SVG and Sass Sprite
 gulp.task('sprite_svg', function () {
-    return gulp.src(paths.svg.src)
+    return gulp.src(paths.svg.sprite)
         .pipe(svg.sprite_svg({
             shape: {
                 spacing: { padding: 6 }
@@ -132,48 +148,52 @@ gulp.task('sprite_svg', function () {
 });
 
 // SVG to PNG
-gulp.task('svg_png', ['sprite_svg'], function() {
+gulp.task('svg_png', function() {
     return gulp.src(paths.svg.file)
+        .pipe(plumber({errorHandler: onError}))
         .pipe(svg.svg2png())
         .pipe(gulp.dest(paths.img.src));
 });
-    
-gulp.task('svg', ['svg_png','svgmin']);
 
 
-// Minify SVG's
-gulp.task('svgmin', function () {
-    return gulp.src('_assets/svg/**/*.svg')
+
+
+// Minify Images
+gulp.task('images', function () {
+    return gulp.src(paths.img.src + '**/*')
         .pipe(plumber({errorHandler: onError}))
-        .pipe(svgmin())
-        .pipe(gulp.dest('_assets/svg'))
-        .pipe(gulp.dest('assets/svg'));
+        .pipe(imagemin({
+            progressive: true
+        }))
+        .pipe(gulp.dest(paths.img.src))
+        .pipe(gulp.dest(paths.img.dest));
 });
+
 
 // Compile SASS
 gulp.task('styles', function () {
     return gulp.src(paths.scss.src + 'main.scss')
         .pipe(plumber({errorHandler: onError}))
-        .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(browser_sync.reload({stream:true}))
+        .pipe(sass({
+            includePaths: [].concat(normalize, neat),
+            outputStyle: 'compressed'
+        }))
         .pipe(gulp.dest(paths.scss.dest));
 });
 
 // Lint scripts
 gulp.task('lint', function () {
-    return gulp.src(['gulpfile.js', paths.js.src + '**/*' ])
+    return gulp.src(['gulpfile.js', paths.js.src + '**/*.js' ])
         .pipe(plumber({errorHandler: onError}))
         .pipe(jshint());
 });
-gulp.task('scripts', ['scripts:jquery', 'scripts:bundle']);
 
 // Compress Javascript
 gulp.task('scripts:jquery', function() {
-    return gulp.src([paths.js.src + '**/*'])
+    return gulp.src([paths.js.src + '**/*.js'])
         .pipe(plumber({errorHandler: onError}))
         .pipe(jshint())
         .pipe(uglify())
-        .pipe(browser_sync.stream())
         .pipe(gulp.dest(paths.js.dest))
         .pipe(gulp.dest(paths.js.src));
 });

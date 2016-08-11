@@ -1,10 +1,8 @@
 
 
-
-
-
-.sg-grid {
-	> .col {
+.list {
+	@include outer-container;
+	> li {
 		height: 60px;
 		line-height: 60px;
 		margin-bottom: $gutter;
@@ -13,10 +11,51 @@
 		color: $c-white;
 		@include border-radius(2px);
 	}
+	.one {
+		@include span-columns(1);
+		@include omega(3n);
+	}
+	.two {@include span-columns(2);}
+	.tree {
+		@include span-columns(3);
+	}
+	.four {
+		@include span-columns(4);
+		// @include omega(2n);
+	}
+	.five {
+		@include span-columns(5);
+		@include omega(2n);
+	}
+	.six {
+		@include span-columns(6);
+		@include omega(4n);
+	}
+	.seven {@include span-columns(7);}
+	.eight {@include span-columns(8);}
+	.nine {@include span-columns(9);}
+	.ten {@include span-columns(10);}
+
+	.doze {
+		@include span-columns(12);
+		.desktop {display: block;}
+		.tablet {display: none;}
+		.mobile {display: none;}
+
+		@include media($tablet-screen) {
+			.desktop {display: none;}
+			.tablet {display: block;}
+		}
+
+		@include media($mobile-screen) {
+			.mobile {display: block;}
+		}
+	}
+
+	.right {
+		@include omega();
+	}
 }
-
-
-
 
 .element {
 	$first-breakpoint-value: 400px;
@@ -36,131 +75,150 @@
 	  }
 	}
 }
-.button {
-	margin-right: 10px;
-	margin-bottom: 10px
-}
 
-.button.primary {
-	@extend .-primary;
-}
-.button.success {
-	@extend .-success;
-}
-.button.error {
-	@extend .-error;
-}
-.button.warning {
-	@extend .-warning;
-}
-.button.link {
-	@extend .-link;
-}
-.button.small {
-	@extend .-small;
-}
-.button.big {
-	@extend .-big;
-	// @extend .-icon;
-	@extend .-error;
-	&:after {
-		// @extend  .-cart;
-	}
-}
-.button.large {
-	@extend .-large;
-	@extend .-success;
-}
 
-.border {
-	.button.disabled {
-		@extend .-border;
-	}
-	.button.one {
-		@extend .-border;
-	}
-	.button.primary {
-		@extend .-border;
-		@extend .-primary;
-	}
-	.button.success {
-		@extend .-border;
-		@extend .-success;
-	}
-	.button.error {
-		@extend .-border;
-		@extend .-error;
-	}
-	.button.warning {
-		@extend .-border;
-		@extend .-warning;
-	}
-	.button.link {
-		@extend .-border;
-		@extend .-link;
-	}
-
-	.button.small {
-		@extend .-border;
-		@extend .-small;
-	}
-	.button.big {
-		@extend .-border;
-		@extend .-big;
-	}
-	.button.large {
-		@extend .-border;
-		@extend .-large;
-		// @extend .-primary;
-		// @extend .-icon;
-		&:after {
-			// @extend .-cart;
-		}
+.sg-grid {
+	
+	> .col {
+		height: 60px;
+		line-height: 60px;
+		margin-bottom: $gutter;
+		text-align: center;
+		background: $c-facebook;
+		color: $c-white;
+		@include border-radius(2px);
 	}
 }
 
-.with {
-	// @extend .-icon;
-	&.-l {
-		&:before {
-			// @extend .-cart;
-		}
-	}
-	&.-r {
-		&:after {
-			// @extend .-cart;
-		}
-	}
-}
 
-.button.cart {
-	@extend .-border;
-	&:before {
-		// @extend  .-cart;
-	}
-}
 
-.teste-img {
-	&:before {
-		content: '';
-		display: block;
-		@include sprite($facebook);
-	}
-}
-.teste-img-2 {
-	&:before {
-		content: '';
-		display: block;
-		@include sprite($banco-brasil);
-	}
-}
-.teste-img-3 {
-	&:before {
-		content: '';
-		display: block;
-		@include sprite($gplus);
-	}
-}
+
+
+// .button {
+// 	margin-right: 10px;
+// 	margin-bottom: 10px
+// }
+
+// .button.primary {
+// 	@extend .-primary;
+// }
+// .button.success {
+// 	@extend .-success;
+// }
+// .button.error {
+// 	@extend .-error;
+// }
+// .button.warning {
+// 	@extend .-warning;
+// }
+// .button.link {
+// 	@extend .-link;
+// }
+// .button.small {
+// 	@extend .-small;
+// }
+// .button.big {
+// 	@extend .-big;
+// 	// @extend .-icon;
+// 	@extend .-error;
+// 	&:after {
+// 		// @extend  .-cart;
+// 	}
+// }
+// .button.large {
+// 	@extend .-large;
+// 	@extend .-success;
+// }
+
+// .border {
+// 	.button.disabled {
+// 		@extend .-border;
+// 	}
+// 	.button.one {
+// 		@extend .-border;
+// 	}
+// 	.button.primary {
+// 		@extend .-border;
+// 		@extend .-primary;
+// 	}
+// 	.button.success {
+// 		@extend .-border;
+// 		@extend .-success;
+// 	}
+// 	.button.error {
+// 		@extend .-border;
+// 		@extend .-error;
+// 	}
+// 	.button.warning {
+// 		@extend .-border;
+// 		@extend .-warning;
+// 	}
+// 	.button.link {
+// 		@extend .-border;
+// 		@extend .-link;
+// 	}
+
+// 	.button.small {
+// 		@extend .-border;
+// 		@extend .-small;
+// 	}
+// 	.button.big {
+// 		@extend .-border;
+// 		@extend .-big;
+// 	}
+// 	.button.large {
+// 		@extend .-border;
+// 		@extend .-large;
+// 		// @extend .-primary;
+// 		// @extend .-icon;
+// 		&:after {
+// 			// @extend .-cart;
+// 		}
+// 	}
+// }
+
+// .with {
+// 	// @extend .-icon;
+// 	&.-l {
+// 		&:before {
+// 			// @extend .-cart;
+// 		}
+// 	}
+// 	&.-r {
+// 		&:after {
+// 			// @extend .-cart;
+// 		}
+// 	}
+// }
+
+// .button.cart {
+// 	@extend .-border;
+// 	&:before {
+// 		// @extend  .-cart;
+// 	}
+// }
+
+// .teste-img {
+// 	&:before {
+// 		content: '';
+// 		display: block;
+// 		@include sprite($facebook);
+// 	}
+// }
+// .teste-img-2 {
+// 	&:before {
+// 		content: '';
+// 		display: block;
+// 		@include sprite($banco-brasil);
+// 	}
+// }
+// .teste-img-3 {
+// 	&:before {
+// 		content: '';
+// 		display: block;
+// 		@include sprite($gplus);
+// 	}
+// }
 
 
 

@@ -5,18 +5,25 @@
 	'settings/typography';
 
 // Helpers           ---------------------------------------- //
+
+// 'helpers/neat/neat',
+// 'helpers/bourbon/bourbon',
+
 @import 
+	'bourbon',
+	'neat',
 	'helpers/mixins',
-	'helpers/bourbon/bourbon',
-	'helpers/neat/neat',
 	'helpers/nprogress',
 	'helpers/functional';
 // @import "tools/waves";
 
 
 // Generic         ---------------------------------------- //
+
+// 'generic/normalize';
+
 @import 
-	'generic/normalize';
+	'normalize';
 
 // Base            ---------------------------------------- //
 @import 
@@ -24,7 +31,6 @@
 
 // Components      ---------------------------------------- //
 @import
-	'components/grid',
 	'components/syntax-highlighting',
 	'components/header',
 	'components/navigation',
@@ -35,8 +41,8 @@
 
 // Pages           ---------------------------------------- //
 @import 
-	'pages/contact';
-	//'pages/styleguide',
+	'pages/contact',
+	'pages/styleguide';
 
 // Trump           ---------------------------------------- //
 // @import "trump/...";

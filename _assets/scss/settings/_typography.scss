@@ -1,10 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Roboto+Mono:400,500);
 
-$font-icon:    'lg-icons';
 $font-light:   'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
 $font-regular: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+$font-bold:    'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
 $font-meta:    'Roboto Mono', monospace;
-// $font-bold:    'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
 
 // Typography
 $base-font-family:    $font-regular;
@@ -12,41 +11,36 @@ $heading-font-family: $font-regular;
 $font-btn:            $font-regular;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height:    1.5;
 $heading-line-height: 1.2;
 
 // Font sizing
 @mixin fs-title {
   line-height: 44px;
-  font-size: 40px;
+  font-size:   40px;
   font-family: $font-meta;
   font-weight: 500;
 }
 
 @mixin fs-subtitle {
   line-height: 22px;
-  font-size: 20px;
+  font-size:   20px;
   font-family: $font-meta;
   font-weight: 500;
 }
 
-@mixin fs-h1 {
-  line-height: 39px;
-  font-size: 35px;
-}
-
-@mixin fs-h2 {
-  line-height: 34px;
-  font-size: 30px;
+@mixin fs-headings {
+  font-weight: bold;
+  font-family: $font-bold;
 }
 
 @mixin fs-body {
   line-height: 20px;
-  font-size: 18px;
+  font-size:   18px;
 }
 
 @mixin fs-meta {
-  font-size: 16px;
+  font-size:   16px;
   font-family: $font-meta;
   font-weight: 500;
   line-height: 18px;
