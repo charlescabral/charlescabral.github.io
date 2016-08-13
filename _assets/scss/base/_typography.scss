@@ -45,3 +45,8 @@ picture {
   margin: 0;
   max-width: 100%;
 }
+
+svg,
+svg:not(:root) {
+  height: 100%;
+}

@@ -13,10 +13,11 @@
 	'bourbon',
 	'neat',
 	'helpers/mixins',
+	'helpers/sprite_svg',
+	'helpers/mixin_sprite',
 	'helpers/nprogress',
 	'helpers/functional';
 // @import "tools/waves";
-
 
 // Generic         ---------------------------------------- //
 
@@ -33,7 +34,6 @@
 @import
 	'components/syntax-highlighting',
 	'components/header',
-	'components/navigation',
 	'components/article',
 	'components/archives',
 	'components/social',
@@ -41,6 +41,7 @@
 
 // Pages           ---------------------------------------- //
 @import 
+	'pages/home',
 	'pages/contact',
 	'pages/styleguide';
 

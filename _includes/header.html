@@ -1,5 +1,8 @@
-<nav class="navigation fixed {{include.navclass}}">
+<nav class="navigation {{include.navclass}} {% if page.url != '/' %}fixed{% endif %}">
 	<div class="container">
+		<a class="brand" href="#">
+			<svg class="ico"><use xlink:href="#charles"></use></svg>
+		</a>
 		<ul>
 			<li><a class="item {% if page.url == '/' %}current{% endif %}" href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
 			<li><a class="item {% if page.url == '/about/' %}current{% endif %}" href="{{ "/about/" | prepend: site.baseurl }}">About</a></li>
@@ -14,5 +17,8 @@
 			</li>
 			<li><a class="item {% if page.url == '/contact/' %}current{% endif %}" href="{{ "/contact/" | prepend: site.baseurl }}">Contact</a></li>
 		</ul>
+		<a class="menu-control" href="#">
+			<svg class="ico"><use xlink:href="#icon-menu"></use></svg>
+		</a>
 	</div>
 </nav>

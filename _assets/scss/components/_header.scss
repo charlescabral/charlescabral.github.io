@@ -1,0 +1,84 @@
+path { transition: fill .4s ease; }
+
+
+.brand {
+	@include span-columns(3);
+    @include transition(fill, .5s);
+    @include animation-fill-mode(backwards);
+    height: 40px;
+    margin: 12px 0;
+	fill: darken($c-dark-primary, 20);
+    &:hover {
+        fill: $c-white;
+    }
+}
+
+.menu-control {
+    @include span-columns(3);
+    @include transition(fill, .5s);
+    @include animation-fill-mode(backwards);
+    fill: darken($c-dark-primary, 20);
+    height: 24px;
+    width:  24px;
+    margin: 12px 0;
+    display: none;
+
+    &:hover { fill: $c-white; }
+
+    @include media($mobile-screen) {
+        display: block!important;
+    }
+}
+
+//  Navigation
+.navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $c-dark-primary;
+    z-index: 10;
+
+    &.fixed {
+        position: fixed;
+        will-change: transform;
+        @include box-shadow(0, -3px, 9px, 0, $c-black);
+    }
+
+    ul {
+        float: right;
+        > li {
+            padding: 0 1em;
+            display: inline-block;
+
+            &:last-child() {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .item {
+        position: relative;
+        display: inline-block;
+        padding: 1.5em 0;
+        @include fs-meta;
+        color: $c-white;
+        text-transform: uppercase;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            transition: background ease-in-out 0.2s;
+        }
+
+        &:hover:after,
+        &.current:after {
+            background: $c-white;
+        }
+    }
+}

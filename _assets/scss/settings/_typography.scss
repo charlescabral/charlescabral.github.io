@@ -16,15 +16,15 @@ $heading-line-height: 1.2;
 
 // Font sizing
 @mixin fs-title {
-  line-height: 44px;
-  font-size:   40px;
+  line-height: 38px;
+  font-size:   32px;
   font-family: $font-meta;
   font-weight: 500;
 }
 
 @mixin fs-subtitle {
   line-height: 22px;
-  font-size:   20px;
+  font-size:   18px;
   font-family: $font-meta;
   font-weight: 500;
 }
