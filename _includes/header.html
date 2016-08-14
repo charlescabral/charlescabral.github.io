@@ -1,7 +1,7 @@
-<nav class="navigation {{include.navclass}} {% if page.url != '/' %}fixed{% endif %}">
+<nav class="navigation {{include.navclass}}">
 	<div class="container">
 		<a class="brand" href="#">
-			<svg class="ico"><use xlink:href="#charles"></use></svg>
+			<svg class="ico"><use xlink:href="#brand-simple"></use></svg>
 		</a>
 		<ul>
 			<li><a class="item {% if page.url == '/' %}current{% endif %}" href="{{ "/" | prepend: site.baseurl }}">Home</a></li>

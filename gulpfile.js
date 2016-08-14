@@ -87,7 +87,7 @@ gulp.task('jekyll-rebuild', ['rebuild'], function () { browser_sync.reload() });
 gulp.task('watch', ['jekyll', 'serve'], function () {
     gulp.watch(paths.scss.src + '**/*.scss', ['styles', 'jekyll-rebuild']);
     gulp.watch(paths.js.src + '**/*.js', ['scripts', 'jekyll-rebuild']);
-    gulp.watch(['_pages/**/*','_projects/**/*','_posts/**/*', '_data/**/*', '_includes/**/*'], ['jekyll-rebuild']);
+    gulp.watch(['_pages/**/*','_projects/**/*','_posts/**/*', '_data/**/*', '_includes/**/*', '_layouts/**/*'], ['jekyll-rebuild']);
 });
 
 // Browser Sync

@@ -5,39 +5,48 @@ path { transition: fill .4s ease; }
 	@include span-columns(3);
     @include transition(fill, .5s);
     @include animation-fill-mode(backwards);
-    height: 40px;
+    @include size(40px);
     margin: 12px 0;
-	fill: darken($c-dark-primary, 20);
+    fill: $c-white;
     &:hover {
-        fill: $c-white;
+        // fill: darken($c-dark-primary, 20);
+    }
+    @include media($mobile) {
+        
     }
 }
+
+
 
 .menu-control {
     @include span-columns(3);
     @include transition(fill, .5s);
     @include animation-fill-mode(backwards);
-    fill: darken($c-dark-primary, 20);
-    height: 24px;
-    width:  24px;
-    margin: 12px 0;
+    @include size(32px);
+    fill: $c-white; 
+    margin: 16px 0;
     display: none;
+    float: right;
 
-    &:hover { fill: $c-white; }
-
-    @include media($mobile-screen) {
-        display: block!important;
+    &:hover { 
+        // fill: darken($c-dark-primary, 20);
     }
+    
+    @include media($tablet) {
+        display: block;
+    }
+
 }
 
 //  Navigation
 .navigation {
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 0;
     width: 100%;
     background: $c-dark-primary;
     z-index: 10;
+
 
     &.fixed {
         position: fixed;
@@ -47,6 +56,11 @@ path { transition: fill .4s ease; }
 
     ul {
         float: right;
+        
+        @include media($tablet) {
+            display: none;
+        }
+
         > li {
             padding: 0 1em;
             display: inline-block;
@@ -60,7 +74,7 @@ path { transition: fill .4s ease; }
     .item {
         position: relative;
         display: inline-block;
-        padding: 1.5em 0;
+        padding: em(23px) 0;
         @include fs-meta;
         color: $c-white;
         text-transform: uppercase;

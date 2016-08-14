@@ -1,2 +1,30 @@
+$s-m: 480px !default;
+$s-t: 992px !default;
+$s-d: $max-width !default;
 
+$mobile:  new-breakpoint(max-width $s-m, 4); 
+$tablet:  new-breakpoint(max-width $s-t, 8); 
+$desktop: new-breakpoint(min-width $s-d, 12);
 
+.content { 
+	padding-top: 64px;
+    min-height: 70vh;
+}
+
+.full-container { @include outer-container(100%); }
+.container {
+	@include clearfix;
+	@include outer-container;
+	@include media(max-width $max-width + ($gutter*6)) {
+		margin: 0 ($gutter*2);
+	}
+}
+
+.col-content {
+	@include span-columns(8);
+}
+aside {
+	@include span-columns(4);
+	background-color: $c-light-primary;
+	padding: em(20);
+}

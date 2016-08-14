@@ -42,12 +42,12 @@
 		.tablet {display: none;}
 		.mobile {display: none;}
 
-		@include media($tablet-screen) {
+		@include media($tablet) {
 			.desktop {display: none;}
 			.tablet {display: block;}
 		}
 
-		@include media($mobile-screen) {
+		@include media($mobile) {
 			.mobile {display: block;}
 		}
 	}
@@ -64,12 +64,12 @@
 	$large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
 
 	.element {
-	  @include media($medium-viewport) {
+	  @include media($tablet) {
 	    @include span-columns(6);
 	    @include omega(2n);
 	  }
 
-	  @include media($large-viewport) {
+	  @include media($mobile) {
 	    @include span-columns(4);
 	    @include omega(3n);
 	  }

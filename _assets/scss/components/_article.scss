@@ -3,9 +3,8 @@
     > .header {
         padding-top: 5rem;
         padding-bottom: 5rem;
-        padding-right: 2.5rem;
-        padding-left: 2.5rem;
-        background: $c-dark-primary;
+        margin-bottom: em(20);
+        background: lighten($c-dark-primary, 4);
 
         .title {
             position: relative;
@@ -29,5 +28,8 @@
             color: $c-white;
             margin: 0;
         }
+    }
+
+    > .main {
     }
 }

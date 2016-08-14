@@ -22,7 +22,6 @@
 // Generic         ---------------------------------------- //
 
 // 'generic/normalize';
-
 @import 
 	'normalize';
 
@@ -32,12 +31,14 @@
 
 // Components      ---------------------------------------- //
 @import
+	'components/grid',
 	'components/syntax-highlighting',
 	'components/header',
 	'components/article',
 	'components/archives',
 	'components/social',
 	'components/footer';
+
 
 // Pages           ---------------------------------------- //
 @import 
