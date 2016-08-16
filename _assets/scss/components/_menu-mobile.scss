@@ -3,23 +3,70 @@ body {
   height: 100%;
 }
 
-// .slideout-menu {
-//   position: fixed;
-//   left: 0;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   z-index: 0;
-//   width: 256px;
-//   overflow-y: auto;
-//   -webkit-overflow-scrolling: touch;
-//   display: none;
-// }
+#menu-mobile {
+	background-color: $c-light-primary;
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+	width: 256px;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	display: none;
+
+	&.active {display: block;}
+
+	> .nav-itens {
+		margin: 0;
+		border: $base-border;
+		border-radius: 2px;
+		overflow: hidden;
+		position: relative;
+		@include clearfix;
+
+		> li {
+			display: block;
+			line-height: 1.5rem;
+			padding: 10px 20px;
+			margin: 0;
+			border-bottom: $base-border;
+			@include clearfix;
+
+			&.active {
+				// background-color: ;
+				// color: ;
+
+				.secondary-content {
+					color: #fff;
+				}
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			a {
+				display: block;
+				color: $c-black;
+				// color: ;
+				&:not(.active) {
+					&:hover {
+						// background-color: ;
+					}
+				}
+			}
+		}
+	}
+}
 
 .slideout-panel {
+  @include box-shadow(16px, 0px, 20px, -20px, $c-black);
   position:relative;
   z-index: 1;
   will-change: transform;
+  background-color: $c-white;
 }
 
 .slideout-open,

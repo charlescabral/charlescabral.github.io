@@ -1,1 +1,1 @@
-!function(e){e(function(){var e=new Slideout({panel:document.getElementById("panel"),menu:document.getElementById("menu"),padding:256,tolerance:70});document.querySelector(".menu-control").addEventListener("click",function(){e.toggle()})})}(jQuery);
+!function(e){e(function(){var n=new Slideout({panel:document.getElementById("panel"),menu:document.getElementById("menu-mobile"),padding:256,tolerance:70,side:"right",touch:!0});e(".menu-control").on("click",function(){n.toggle(),e(this).toggleClass("active"),e("#menu-mobile").toggleClass("active")})})}(jQuery);

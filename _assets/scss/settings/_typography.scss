@@ -45,3 +45,11 @@ $heading-line-height: 1.2;
   font-weight: 500;
   line-height: 18px;
 }
+
+@mixin fs-small($align:'') {
+  font-size:   12px;
+  text-align: $align;
+  font-family: $font-meta;
+  font-weight: 500;
+  line-height: 14px;
+}
