@@ -29,7 +29,7 @@ $asset-pipeline: true;
 $output-bourbon-deprecation-warnings: true;
 
 $prefix-for-webkit:    true;
-$prefix-for-mozilla:   false;
-$prefix-for-microsoft: false;
-$prefix-for-opera:     false;
-$prefix-for-spec:      false;
+$prefix-for-mozilla:   true;
+$prefix-for-microsoft: true;
+$prefix-for-opera:     true;
+$prefix-for-spec:      true;

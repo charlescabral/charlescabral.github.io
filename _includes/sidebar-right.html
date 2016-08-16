@@ -1,9 +1,51 @@
-<nav>
-	<ul>
-		<li><a class="{% if page.url contains 'categories' %} current{% endif %}" href="{{site.baseurl}}/blog/categories/">Categories</a></li>
-		<li><a class="{% if page.url contains 'tags' %} current{% endif %}" href="{{site.baseurl}}/blog/tags/">Tags</a></li>
+<div class="sidebar-module">
+  <h4>Posts Recentes</h4>
+  {% for post in site.posts limit:5 %}
+  <li>
+  <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</div>
+
+<div class="sidebar-module">
+  <h4>Tags</h4>
+  {% for tag in site.tags %}
+    <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a> &nbsp;
+  {% endfor %}
+</div>
+
+<div class="sidebar-module">
+  <h4>Arquivo</h4>
+
+  {% for post in site.posts %}
+  {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% unless year == this_year %}
+  {% assign year = this_year %}
+  {% unless post == site.posts.first %}
+  {% endunless %}
+  <li id="{{ year }}" > <a href="{{ site.baseurl }}/archives/#{{year}}">{{ year }}</a></li>
+  {% endunless %}
+  {% endfor %}
+
+</div>
+
+<div class="sidebar-module">
+	<h4>Categorias</h4>
+	<ul class="tag-box inline">
+	{% assign tags_list = site.categories %}  
+	  {% if tags_list.first[0] == null %}
+	    {% for tag in tags_list %} 
+	      <li><a href="{{ site.baseurl }}/categories/#{{ tag }}">{{ tag | capitalize }} <span>{{ site.tags[tag].size }}</span></a></li>
+	    {% endfor %}
+	  {% else %}
+	    {% for tag in tags_list %} 
+	      <li><a href="{{ site.baseurl }}/categories/#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>{{ tag[1].size }}</span></a></li>
+	    {% endfor %}
+	  {% endif %}
+	{% assign tags_list = nil %}
 	</ul>
-</nav>
+</div>
+
 
 
 
