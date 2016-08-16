@@ -29,11 +29,12 @@ select {
   @include box-sizing(border-box);
   @include appearance(none);
   @include fs-body;
+  background: $c-white;
   background-color: $base-background-color;
   border: $base-border;
   font-family: $base-font-family;
   margin-bottom: $small-spacing;
-  padding: $base-spacing / 3;
+  padding: em(10px);
   width: 100%;
   @include appearance(none);
 
@@ -42,7 +43,7 @@ select {
   }
 
   &:focus {
-    border-color: $c-action-color;
+    border-color: $c-dark-primary;
     outline: none;
   }
 

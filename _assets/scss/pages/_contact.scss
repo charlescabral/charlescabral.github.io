@@ -1,8 +1,9 @@
 
 
 .send {
-	// @include button;
-	// 
+	display: block;
+	width: 100%;
+
 	&:hover {
 	  @include animation(scale 1.0s ease-in, slide 2.0s ease);
 	  @include animation-name(scale, slide);
@@ -13,6 +14,14 @@
 }
 
 
+.content-contact {
+	.col {
+		@include span-columns(6);
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+	}
+}
 
 #notifications {
     cursor: pointer;

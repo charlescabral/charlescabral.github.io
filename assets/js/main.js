@@ -1,1 +1,1 @@
-!function(n){n(function(){})}(jQuery);
+!function(e){e(function(){var e=new Slideout({panel:document.getElementById("panel"),menu:document.getElementById("menu"),padding:256,tolerance:70});document.querySelector(".menu-control").addEventListener("click",function(){e.toggle()})})}(jQuery);

@@ -7,19 +7,29 @@ changefreq: monthly
 permalink: "/contact/"
 ---
 
-<div class="container">
+<div class="container content-contact">
 
-	<form id="contact-form" action="//getsimpleform.com/messages?form_api_token=3ae6c27587e8cc0b9bf81aa8eb3904ef" method="post">
-		<select name="subject" required>
-			<option value="0" disabled selected>Assunto</option>
-			<option value="Freela">Freela</option>
-			<option value="Contrato">Contrato</option>
-		</select><br>
-		<input type='text' name='name' placeholder="Nome" required/><br>
-		<input type='text' name='email' placeholder="email@email.com" required/><br>
-		<textarea name="message" cols="20" rows="10"></textarea><br>
-		<input class="send" type='submit' value='vai' />
-	</form>
+	<div class="row">
+			
+		<div class="col">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin maximus elementum elit id fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce tellus libero, pretium non egestas in, cursus sagittis elit. 
+		</div>
+
+		<div class="col">
+			<form id="contact-form" action="//getsimpleform.com/messages?form_api_token=3ae6c27587e8cc0b9bf81aa8eb3904ef" method="post">
+				<select name="subject" required>
+					<option value="0" disabled selected>Assunto</option>
+					<option value="Freela">Freela</option>
+					<option value="Contrato">Contrato</option>
+				</select><br>
+				<input type='text' name='name' placeholder="Nome" required/><br>
+				<input type='text' name='email' placeholder="email@email.com" required/><br>
+				<textarea name="message" cols="20" rows="10"></textarea><br>
+				<input class="button -success -big send" type='submit' value='vai' />
+			</form>
+		</div>
+	</div>
+
 
 	<div class="site-alert"></div>
 </div>
