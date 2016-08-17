@@ -24,7 +24,7 @@ permalink: /blog/:title/
 collections:
   projects:
     output: true
-    permalink: /work/:path/
+    permalink: /:path/
 
 compress_html:
   clippings: all

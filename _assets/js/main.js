@@ -1,13 +1,15 @@
 (function ($) {
     $(function () {
 
+        lazySizes.init();
+
     	var slideout = new Slideout({
     		'panel': document.getElementById('panel'),
     		'menu': document.getElementById('menu-mobile'),
     		'padding': 256,
     		'tolerance': 70,
             'side': 'right',
-            'touch': true
+            'touch': false
     	});
 
     	// Toggle button
@@ -16,6 +18,27 @@
             $(this).toggleClass('active');
             $('#menu-mobile').toggleClass('active');
         });
+
+        $('#page_holder').pagify({ 
+            pages: [], 
+            animation: 'fadeIn',
+            animationOut: 'fadeOut',
+            cache: false
+        });
+
+        $('.open-project').animatedModal({
+            modalTarget: 'modal-projects',
+            animatedIn: 'bounceInUp',
+            animatedOut: 'bounceOutDown'
+        });
+
+
+
+
+
+
+
+
 
     });
 })(jQuery);

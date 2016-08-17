@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: default
 title: Work
 subTitle: Dicas e reflexões sobre desenvolvimento web, usabilidade e design
 folder: work
@@ -9,15 +9,23 @@ permalink: "/work/"
 ---
 
 <div class="container">
-
-	{% for project in site.projects limit:4 %}
-		<ul>
+	<ul>
+		{% for project in site.projects limit:4 %}
 			<li>
-				<a href="{{site.baseurl}}{{project.url}}">
+				<a class="open-project" href="#{{project.url}}" data-modal="#modal-projects">
 					<h3>{{project.title}}</h3>
-					<img src="{{site.baseurl}}/assets/img/{{project.image}}" alt="">
+					<img data-src="{{site.baseurl}}/assets/img/{{project.image}}" class="lazyload" />
 				</a>
 			</li>
-		</ul>
-	{% endfor %}
+		{% endfor %}
+	</ul>
+</div>
+
+
+<!--DEMO02-->
+<div id="modal-projects">
+	<div class="container">
+		<button class="button close-modal-projects">fechar</button>
+	    <div id="page_holder" class="modal-content"></div>
+    </div>
 </div>

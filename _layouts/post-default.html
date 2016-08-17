@@ -2,11 +2,21 @@
 layout: default
 ---
 
-{% include breadcrumb.html %}
-
 <div class="container article-entry"> 
 	
 	{{content}}
 
 	<a href="{{page.source}}">Source</a>
+
+	{% if page.related_projects.size > 0 %}
+	<h3>Related Projects</h3>
+	{% for project in page.related_projects limit:3 %}
+	<a href="/{{ project.dir }} ">
+	    <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" title="{{ project.image.title }}">
+	</a>
+	{% endfor %}
+	{% endif %}
+
+
+	UI/UX DESIGNER & FRONT-END DEVELOPER
 </div>

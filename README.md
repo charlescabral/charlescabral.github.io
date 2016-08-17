@@ -9,7 +9,6 @@ Todo:
 - [ ] Portfolio
 - [ ] Write more blogs :smile:
 
-
 ## How to run
 
 Note: I changed to use Gulp for building & deployment Jekyll web instead of Bundle. Gulp is more powerful and easier to use. Need to change name (or delete) 'Gemfile' file to avoid error when running gulp task.

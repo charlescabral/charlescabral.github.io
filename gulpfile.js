@@ -42,10 +42,10 @@ var paths        = {
         dest: assets.dest + 'css/'
     },
     svg: {
-        src:    assets.src + 'svg/',
-        dest:   assets.dest + 'svg/',
-        sprite: assets.src + 'svg/sprite/*.svg',
-        file:   assets.src + 'svg/sprite_svg.svg',
+        src:    assets.src + 'img/svg/',
+        dest:   assets.dest + 'img/svg/',
+        sprite: assets.src + 'img/svg/sprite/*.svg',
+        file:   assets.src + 'img/svg/sprite_svg.svg',
         css:    assets.src + 'scss/helpers/_sprite_svg.scss'
     },
     templates: {

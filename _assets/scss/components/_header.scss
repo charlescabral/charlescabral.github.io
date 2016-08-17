@@ -1,6 +1,3 @@
-path { transition: fill .4s ease; }
-
-
 .brand {
 	@include span-columns(3);
     @include transition(fill, .5s);
@@ -17,12 +14,14 @@ path { transition: fill .4s ease; }
 }
 
 
-
 .menu-control {
     @include span-columns(3);
     @include transition(fill, .5s);
     @include animation-fill-mode(backwards);
     @include size(32px);
+    padding: 0;
+    border: 0;
+    background: none;
     fill: $c-white; 
     margin: 16px 0;
     display: none;
@@ -37,6 +36,7 @@ path { transition: fill .4s ease; }
     }
 
 }
+
 
 //  Navigation
 .navigation {
