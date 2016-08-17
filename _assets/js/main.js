@@ -28,8 +28,8 @@
 
         $('.open-project').animatedModal({
             modalTarget: 'modal-projects',
-            animatedIn: 'bounceInUp',
-            animatedOut: 'bounceOutDown'
+            animatedIn: 'slideInRight',
+            animatedOut: 'slideOutRight'
         });
 
 
