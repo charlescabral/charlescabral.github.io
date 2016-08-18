@@ -33,14 +33,5 @@
             animatedOut: 'slideOutDown',
             color: '#FFF'
         });
-
-
-
-
-
-
-
-
-
     });
 })(jQuery);

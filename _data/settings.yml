@@ -4,6 +4,7 @@
 title: Charles Cabral
 description: Frontend Developer // Web Designer
 email: charles.cabral.neto@gmail.com
+color: '#2C2C2C'
 
 #-------------------------------
 # SEO Section
@@ -27,11 +28,8 @@ skills:
 # Contact Section
 
 social:
-- {icon: 'twitter', link: 'http://twitter.com/devtipsshow'}
-- {icon: 'dribbble', link: 'https://dribbble.com/travisneilson'}
-- {icon: 'behance', link: 'https://www.behance.net/travisneilson'}
-- {icon: 'youtube', link: 'https://www.youtube.com/DevTipsForDesigners'}
-- {icon: 'linkedin', link: 'http://www.linkedin.com/in/travisneilson/'}
+- {icon: 'twitter', link: 'http://twitter.com/charlescabral'}
+- {icon: 'linkedin', link: 'http://www.linkedin.com/in/charlescabral/'}
 
 
 # social network icons available: 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' / 'behance' / 'soundcloud' / 'vine'

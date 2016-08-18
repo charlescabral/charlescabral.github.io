@@ -85,6 +85,10 @@
             } 
         });
 
+        if(window.location.hash) {
+          modal.click();
+        }
+
 
 
         closeBt.click(function(event) {

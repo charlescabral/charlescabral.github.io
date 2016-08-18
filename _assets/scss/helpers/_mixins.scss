@@ -86,6 +86,21 @@
     }
 }
 
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+
+@mixin overflow-scroll($value) {
+  overflow: auto;
+  -webkit-overflow-scrolling: $value;
+  -moz-overflow-scrolling: $value;
+  -o-overflow-scrolling: $value;
+  -ms-overflow-scrolling: $value;
+  overflow-scrolling: $value;
+}
 
 
 @mixin inline-block($align: middle) {
