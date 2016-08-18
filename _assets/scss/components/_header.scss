@@ -1,3 +1,9 @@
+header {
+    &.opacity {
+        @include opacity(0);
+    }
+}
+
 .brand {
 	@include span-columns(3);
     @include transition(fill, .5s);

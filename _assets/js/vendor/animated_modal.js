@@ -68,6 +68,7 @@
 
         modal.click(function(event) {
             $('body, html').css({'overflow':'hidden'});
+            $('header').addClass('opacity');
             $('.slideout-panel').css({'will-change':'initial'});
             if (data == idConc) {
                 if (id.hasClass(settings.modalTarget+'-off')) {
@@ -93,8 +94,9 @@
 
         closeBt.click(function(event) {
             event.preventDefault();
-            var $history = history;
             $('body, html').css({'overflow':'auto'});
+            $('header').removeClass('opacity');
+            var $history = history;
             $history.pushState('', document.title, window.location.pathname); 
             // $('.slideout-panel').delay(300).css({'will-change':'transform'});
 
