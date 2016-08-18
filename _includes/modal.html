@@ -1,0 +1,13 @@
+{% if {{include.position}} == 'top' %}
+
+	<h1>{{page.title}}</h1>
+
+	<img data-src="{{site.baseurl}}/assets/img/{{page.image}}" class="lazyload" />
+
+{% else %}
+
+	<br>
+	<div>footer</div>
+
+{% endif %}
+
