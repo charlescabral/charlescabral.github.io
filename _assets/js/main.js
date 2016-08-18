@@ -17,6 +17,7 @@
             slideout.toggle();
             $(this).toggleClass('active');
             $('#menu-mobile').toggleClass('active');
+            $('#panel').toggleClass('active');
         });
 
         $('#page_holder').pagify({ 
@@ -28,8 +29,9 @@
 
         $('.open-project').animatedModal({
             modalTarget: 'modal-projects',
-            animatedIn: 'slideInRight',
-            animatedOut: 'slideOutRight'
+            animatedIn: 'slideInUp',
+            animatedOut: 'slideOutDown',
+            color: '#FFF'
         });
 
 

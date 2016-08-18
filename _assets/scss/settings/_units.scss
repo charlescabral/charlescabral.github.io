@@ -62,7 +62,7 @@ $prefix-for-spec:      true;
 
 
 // Base module settings
-$base-duration					: 1s !default;           // used in 1-base module
+$base-duration					: 0.3s !default;           // used in 1-base module
 $base-origin 					: top center !default;
 $base-degrees 					: 30deg !default;        // used in lightspeed & special modules
 $base-fill-mode					: both !default;
@@ -105,7 +105,7 @@ $hinge-translate 				: 700px !default;
 // Hugely influenced and inspired by @csswizardry's inuit.css _vars.scss file                       //
 //==================================================================================================//
 
-$use-all                    :   false !default; // all animations status
+$use-all                :   false !default; // all animations status
 $use-fade               :   $use-all !default; // all fades
 $use-bounce             :   $use-all !default; // all bounces
 $use-rotate             :   $use-all !default; // all rotates

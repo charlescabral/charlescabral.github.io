@@ -89,8 +89,10 @@
 
         closeBt.click(function(event) {
             event.preventDefault();
+            var $history = history;
             $('body, html').css({'overflow':'auto'});
-            $('.slideout-panel').css({'will-change':'transform'});
+            $history.pushState('', document.title, window.location.pathname); 
+            // $('.slideout-panel').delay(300).css({'will-change':'transform'});
 
             settings.beforeClose();
             if (id.hasClass(settings.modalTarget+'-on')) {

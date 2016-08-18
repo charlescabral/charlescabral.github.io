@@ -65,8 +65,12 @@ body {
   @include box-shadow(16px, 0px, 20px, -20px, $c-black);
   position:relative;
   z-index: 1;
-  will-change: transform;
   background-color: $c-white;
+  
+  &.active {
+ 	will-change: transform;
+
+  }
 }
 
 .slideout-open,
