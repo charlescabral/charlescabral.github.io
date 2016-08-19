@@ -68,8 +68,6 @@
 
         modal.click(function(event) {
             $('body, html').css({'overflow':'hidden'});
-            $('header').addClass('opacity');
-            $('.slideout-panel').css({'will-change':'initial'});
             if (data == idConc) {
                 if (id.hasClass(settings.modalTarget+'-off')) {
                     id.removeClass(settings.animatedOut);
@@ -86,19 +84,14 @@
             } 
         });
 
-        if(window.location.hash) {
-          modal.click();
-        }
-
-
+        if(window.location.hash) { modal.click() }
 
         closeBt.click(function(event) {
             event.preventDefault();
+            $('.modal-content').fadeOut('300', function() { $(this).html('') });
             $('body, html').css({'overflow':'auto'});
-            $('header').removeClass('opacity');
             var $history = history;
-            $history.pushState('', document.title, window.location.pathname); 
-            // $('.slideout-panel').delay(300).css({'will-change':'transform'});
+            $history.pushState('', document.title, window.location.pathname);
 
             settings.beforeClose();
             if (id.hasClass(settings.modalTarget+'-on')) {

@@ -23,7 +23,7 @@
         $('#page_holder').pagify({ 
             pages: [], 
             animation: 'fadeIn',
-            animationOut: 'fadeOut',
+            animationSpeed: 'slow',
             cache: false
         });
 
@@ -31,7 +31,8 @@
             modalTarget: 'modal-projects',
             animatedIn: 'slideInUp',
             animatedOut: 'slideOutDown',
-            color: '#FFF'
+            color: '#FFF',
+            animationDuration:'.5s'
         });
     });
 })(jQuery);

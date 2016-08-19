@@ -1,10 +1,12 @@
 #-------------------------------
 # General Site Settings
 
-title: Charles Cabral
-description: Frontend Developer // Web Designer
-email: charles.cabral.neto@gmail.com
-color: '#2C2C2C'
+title:  Charles Cabral
+author: Charles Cabral
+bio:    Frontend Developer // Web Designer
+email:  charles.cabral.neto@gmail.com
+color:  '#2C2C2C'
+locale: pt
 
 #-------------------------------
 # SEO Section

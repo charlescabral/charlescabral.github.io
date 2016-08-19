@@ -2,21 +2,42 @@
 layout: default
 ---
 
+
 <div class="container article-entry"> 
-	
+
 	{{content}}
 
 	<a href="{{page.source}}">Source</a>
 
-	{% if page.related_projects.size > 0 %}
-	<h3>Related Projects</h3>
-	{% for project in page.related_projects limit:3 %}
-	<a href="/{{ project.dir }} ">
-	    <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" title="{{ project.image.title }}">
-	</a>
-	{% endfor %}
+	<br>
+	{{ page.date | date: "%d %b %Y" }}
+
+	<br>
+
+	{% include base_path %}
+
+	{% if page.previous or page.next %}
+	<nav class="pagination">
+		{% if page.previous %}
+			<a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">
+				{{ site.data.locales.pt.previous}}
+			</a>
+		{% else %}
+			<a href="#" class="pagination--pager disabled">
+				{{ site.data.locales.pt.previous}}
+			</a>
+		{% endif %}
+		{% if page.next %}
+			<a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">
+				{{ site.data.locales.pt.next}}
+			</a>
+		{% else %}
+			<a href="#" class="pagination--pager disabled">
+				{{ site.data.locales.pt.next}}
+			</a>
+		{% endif %}
+	</nav>
 	{% endif %}
-
-
+	<br>
 	UI/UX DESIGNER & FRONT-END DEVELOPER
 </div>

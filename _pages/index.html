@@ -14,9 +14,7 @@ permalink: '/'
                 <li>
                     <a href="{{site.baseurl}}{{recent.url}}">{{recent.title}}</a>
                     <p>{{recent.meta}}</p>
-
-                    
-                    
+                    {{ recent.date | date: "%d %b" }}
                 </li>
                 {% endfor %}
             </ul>

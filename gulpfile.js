@@ -59,7 +59,7 @@ var paths        = {
 gulp.task('default', ['browser-sync', 'watch']);
 gulp.task('build', ['clean', 'img', 'styles', 'lint', 'scripts']);
 gulp.task('img', sequence('svg_min_all', 'sprite_svg', 'svg_inject', 'svg_min_build', 'svg_png', 'images'));
-gulp.task('scripts', ['scripts:jquery', 'scripts:bundle']);
+gulp.task('scripts', ['scripts:jquery', 'scripts:vendor']);
 
 // ============= //
 
@@ -227,22 +227,22 @@ gulp.task('lint', function () {
 
 // Compress Javascript
 gulp.task('scripts:jquery', function() {
-    return gulp.src([paths.js.src + '**/*.js'])
+    return gulp.src([paths.js.src + '*.js', paths.js.src + 'jquery/*.js'])
         .pipe(plumber({errorHandler: onError}))
         .pipe(jshint())
         .pipe(uglify())
         .pipe(gulp.dest(paths.js.dest));
 });
 
-// Compress Javascript
-gulp.task('scripts:bundle', function() {
-    return gulp.src([paths.js.src + '**/*'])
+gulp.task('scripts:vendor', function() {
+    return gulp.src([paths.js.src + 'vendor/*.js'])
         .pipe(plumber({errorHandler: onError}))
         .pipe(jshint())
-        // .pipe(concat('bundle.js'))
+        .pipe(concat('vendor.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.js.dest));
 });
+
 
 // Alerts Error
 var onError = function(err) {
