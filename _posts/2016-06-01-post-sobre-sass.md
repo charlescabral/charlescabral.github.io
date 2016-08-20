@@ -4,7 +4,7 @@ title: Post sobre SASS
 meta: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat diam ac nunc hendrerit, id feugiat urna luctus.
 source: https://dsgn.io/thoughts/post/set-up-your-apache-server-with-ssl/
 category: css
-tags: [web, jekyll]
+tags: [CSS]
 ---
 
 
