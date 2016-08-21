@@ -12,26 +12,34 @@ layout: default
 
 
 	<br>
+
+	{% if page.path contains '_posts' and page.tags %}
+	    <div class="post__taxonomy">
+	      {% include taxonomy.html %}
+	    </div>
+    {% endif %}
+
+    <br>
 		
-
-
+	{% include sharing.html %}
 	
-
-	<div class="related">
-	  <h2>Related Posts</h2>
-	  <ul class="related-posts">
-	    {% for post in site.related_posts limit:3 %}
-	      <li>
-	        <h3>
-	          <a href="{{ site.baseurl }}{{ post.url }}">
-	            {{ post.title }}
-	            <small>{{ post.date | date_to_string }}</small>
-	          </a>
-	        </h3>
-	      </li>
-	    {% endfor %}
-	  </ul>
-	</div>
+	{% if page.path contains '_posts' and site.related_posts.size >= 3 %}
+		<div class="related">
+		  <h2>Related Posts</h2>
+		  <ul class="related-posts">
+		    {% for post in site.related_posts limit:4 %}
+		      <li>
+		        <h3>
+		          <a href="{{ site.baseurl }}{{ post.url }}">
+		            {{ post.title }}
+		            <small>{{ post.date | date_to_string }}</small>
+		          </a>
+		        </h3>
+		      </li>
+		    {% endfor %}
+		  </ul>
+		</div>
+	{% endif %}
 
 
 
@@ -58,5 +66,8 @@ layout: default
 	</nav>
 	{% endif %}
 	<br>
-	UI/UX DESIGNER & FRONT-END DEVELOPER
 </div>
+
+<footer class="post__footer">
+  {% include author.html %}
+</footer>

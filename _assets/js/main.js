@@ -34,5 +34,14 @@
             color: '#FFF',
             animationDuration:'.5s'
         });
+
+
+        $(document).on('click', '.share a.popup', {}, function popUp(e) {
+            var self = $(this);
+            popupCenter(self.attr('href'), self.text(), 580, 470);
+            e.preventDefault();
+        });
+      
+        $('.article-entry img').materialbox();
     });
 })(jQuery);

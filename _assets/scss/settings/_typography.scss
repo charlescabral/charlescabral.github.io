@@ -41,9 +41,14 @@ $heading-line-height: 1.2;
 
 @mixin fs-meta {
   font-size:   16px;
+  line-height: 18px;
   font-family: $font-meta;
   font-weight: 500;
-  line-height: 18px;
+}
+
+@mixin fs-code {
+  font-family: $font-meta;
+  font-weight: 300;
 }
 
 @mixin fs-small($align:'') {

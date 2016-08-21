@@ -1,0 +1,53 @@
+blockquote {
+  @include border-radius($base-border-radius);
+  background-color: $c-light-primary;
+  color: lighten($c-txt-primary, 40);
+  margin: 1.5em 10px;
+  padding: 1.1em;
+  display: inline-block;
+  font-size: em(16px);
+  line-height: em(16px);
+  font-style: italic;
+  quotes: "\201C""\201D""\2018""\2019";
+  position: relative;
+
+  &:before {
+    content: open-quote;
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: em(80px);
+    line-height: 54px;
+    margin-right: 0.15em;
+    vertical-align: -0.4em;
+    position: absolute;
+    left: 18px;
+    top: 0;
+    color: $c-yellow;
+  }
+
+  p { display: inline; }
+
+  a { color: inherit; }
+
+  cite {
+    // font-family: $sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+
+    &:before {
+      content: "\2014";
+      padding-right: 5px;
+    }
+  }
+}
+
+
+
+
+code,
+kbd,
+pre,
+samp {
+  @include fs-code;
+  font-size: em(14px);
+}

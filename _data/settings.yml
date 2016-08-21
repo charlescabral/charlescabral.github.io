@@ -1,21 +1,22 @@
 #-------------------------------
-# General Site Settings
+## General Site Settings
 
-title:  Charles Cabral
-author: Charles Cabral
-bio:    Frontend Developer // Web Designer
-email:  charles.cabral.neto@gmail.com
-color:  '#2C2C2C'
-locale: pt
+owner:
+  name: "Charles Cabral"
+  email: charles.cabral.neto@gmail.com
+  bio: "Just another boring, tattooed, time traveling designer."
+  avatar: travitar.jpg
+  disqus-shortname: Charles
+  social:
+    - {icon: 'twitter', link: 'http://twitter.com/charlescabral'}
+    - {icon: 'linkedin', link: 'http://www.linkedin.com/in/charlescabral/'}
 
-#-------------------------------
-# SEO Section
-  
+
+
 
 #-------------------------------
 # About Section
-
-skills:
+skills:  
 - {name: Communication, value: '9'}
 - {name: Organization, value: '7'}
 - {name: Learning, value: '10'}
@@ -24,14 +25,16 @@ skills:
 - {name: Visual Design, value: '10'}
 - {name: UX Design, value: '8'}
 - {name: Programming, value: '6'}
-
-
 #-------------------------------
-# Contact Section
-
-social:
-- {icon: 'twitter', link: 'http://twitter.com/charlescabral'}
-- {icon: 'linkedin', link: 'http://www.linkedin.com/in/charlescabral/'}
 
 
-# social network icons available: 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' / 'behance' / 'soundcloud' / 'vine'
+
+# SEO Section
+# google:
+  # ad-client: ca-pub-7328585512091257
+  # ad-slot: 3049671934
+  # analytics: UA-2011187-1
+  # plus: https://plus.google.com/+MichaelRoseDesign/posts
+  # verify: geapSKtvpBNDSfXVmF09E9CnaHGglbO61r4XgLZtEmo
+  
+

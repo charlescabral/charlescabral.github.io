@@ -1,8 +1,15 @@
-markdown: kramdown
-baseurl: ''
-future: true
-encoding: UTF-8
-timezone: America/Sao_Paulo
+markdown:    kramdown
+future:      true
+baseurl:     ''
+encoding:    UTF-8
+timezone:    America/Sao_Paulo
+
+title:       "Made Mistakes"
+description: "Personal website of designer slash illustrator Michael Rose."
+teaser:      default-teaser.png
+logo:        site-logo.png
+color:       '#2C2C2C'
+locale:      pt
 
 include: 
   - _pages
