@@ -11,5 +11,9 @@
 		</a>
 	</li>
 	<li><a class="item {% if page.url == '/contact/' %}current{% endif %}" href="{{ "/contact/" | prepend: site.baseurl }}">Contact</a></li>
-	<li><a class="open-project" href="/#/search/" data-modal="#modal-projects" >lupa</a></li>
+	<li>
+		<a class="open-search" href="javascript:void(0)" data-modal="#modal-search">
+			<svg class="ico"><use xlink:href="#zoom"></use></svg>
+		</a>
+	</li>
 </ul>

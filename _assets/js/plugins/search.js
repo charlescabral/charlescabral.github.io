@@ -1,7 +1,6 @@
 function getSearchJSON()
     {
         $.getJSON("/search.json", function(e) {
-            console.log("[search.json loaded for instant search]");
 
             $("#search_results").html("");
 

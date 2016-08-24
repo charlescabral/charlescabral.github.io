@@ -1,23 +1,25 @@
 ---
-layout: default
+layout: home
 title: Olá, Mundo
 priority: 1.0
 changefreq: monthly
 permalink: '/'
 ---
 
-<article class="article">
-    <div class="article main">
-        <section class="container">
-            <ul>
-                {% for recent in site.posts limit:2 %}
-                <li>
-                    <a href="{{site.baseurl}}{{recent.url}}">{{recent.title}}</a>
-                    <p>{{recent.meta}}</p>
-                    {{ recent.date | date: "%d %b" }}
-                </li>
-                {% endfor %}
-            </ul>
-        </section>
+<header class="nav-home navigation">
+    {% include navigation.html  %}
+</header>
+
+<section class="content-home">
+    <div class="container">
+        {% include social.html  %}
     </div>
-</article>
+
+    {% include search.html  %}
+</section>
+
+
+
+
+
+

@@ -17,6 +17,7 @@
 	'helpers/sprite_svg',
 	'helpers/mixin_sprite',
 	'helpers/nprogress',
+	'helpers/box-image',
 	'helpers/functional';
 // @import "tools/waves";
 
@@ -33,14 +34,14 @@
 // Components      ---------------------------------------- //
 @import
 	'components/syntax-highlighting',
-	'components/markdown',
-	'components/box-image',
+	'components/icons',
 	'components/header',
 	'components/article',
 	'components/social',
 	'components/menu-mobile',
 	'components/footer',
-	'components/sharing';
+	'components/sharing',
+	'components/search';
 
 
 // Pages           ---------------------------------------- //

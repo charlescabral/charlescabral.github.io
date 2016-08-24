@@ -1,5 +1,6 @@
 $s-m: 480px !default;
 $s-t: 992px !default;
+$s-article: 840px !default;
 $s-d: $max-width !default;
 
 $mobile:  new-breakpoint(max-width $s-m, 4); 

@@ -35,6 +35,14 @@
             animationDuration:'.5s'
         });
 
+        $('.open-search').animatedModal({
+            modalTarget: 'modal-search',
+            animatedIn: 'slideInDown',
+            animatedOut: 'slideOutUp',
+            color: '#FFF',
+            animationDuration:'.5s'
+        });
+
 
         $(document).on('click', '.share a.popup', {}, function popUp(e) {
             var self = $(this);

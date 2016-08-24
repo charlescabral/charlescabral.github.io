@@ -3,20 +3,14 @@
     > .header {
         padding-top: 5rem;
         padding-bottom: 5rem;
-        margin-bottom: em(20);
         background: lighten($c-dark-primary, 4);
 
         .title {
             position: relative;
             @include fs-title;
             color: $c-white;
+            text-align: center;
             margin: 0;
-
-            &:after {
-                margin-left: .5rem;
-                color: rgba($c-white, .5);
-                content: '¬';
-            }
 
             span {
                 color: rgba(#fff, .5);
@@ -32,17 +26,42 @@
 
 }
 .article-entry {
+    @include clearfix;
     text-align: center;
+    width: $s-article;
+    margin: 0 auto;
+    padding: em(40);
+    top: em(-60);
+    position: relative;
+    background: $c-white;
+
+    @include media(max-width $s-article) {
+        width: 100%;
+        top: 0;
+        padding: em(20);
+    }
+
+    .title {
+        position: relative;
+        @include fs-title;
+        color: $c-black;
+        text-align: center;
+        margin: 0;
+
+        span {
+            color: rgba(#fff, .5);
+        }
+    }
 
     p {
         text-align: justify;
+        font-size: em(14);
     }
 
     p code, li code, figcaption code {
         padding-bottom: 0;
         padding-bottom: 0.2rem;
-        background: $c-black;
-        color: $c-white;
+        background: $c-light-primary;
         @include fs-code;
         @include border-radius($base-border-radius);
         &:after,

@@ -1,19 +1,4 @@
-$ieSprite: '.lt-ie9' !default;
-$sprite: map-get($icons, sprite) !default;
-// $baseFontSize: 16px !default;
-
-.tweet {
-
-	&:before {
-		@include sprite(twitter);
-		content: '';
-		float: left;
-		margin-right: 0.5em;
-	}
-
-	&:hover {
-		&:before {
-			@include sprite(twitterHover, bg);
-		}
-	}
+.content-home {
+	background: $c-dark-primary;
+	@extend .table; 
 }

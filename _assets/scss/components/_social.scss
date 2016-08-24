@@ -1,0 +1,17 @@
+.social-network {
+	li {
+		display: inline-block;
+
+		a svg {
+		    @include transition(fill, .5s);
+		    @include animation-fill-mode(backwards);
+		    @include size(30px);
+		    margin: 12px 0;
+		    fill: $c-white;
+
+		    &:hover {
+		        // fill: darken($c-dark-primary, 20);
+		    }
+		}
+	}
+}

@@ -2,72 +2,89 @@
 layout: default
 ---
 
+<div class="container-full article">
 
-<div class="container article-entry"> 
+    <header class="header article">
+        <div class="container">
+        </div>
+    </header>
+    
+	<div class="article-entry"> 
 
-	{{content}}
-	<br>
-	{{ page.date | date: "%d %b %Y" }}
-	<a href="{{page.source}}">Source</a>
+        <h1 class="title">{{ page.title }}</h1>
+
+		{{ page.date | date: "%d %b %Y" }}
+	        <div class="content">
+				{{content}}
+			</div>
+		<br>
+		<a href="{{page.source}}">Source</a>
 
 
-	<br>
+		<br>
 
-	{% if page.path contains '_posts' and page.tags %}
-	    <div class="post__taxonomy">
-	      {% include taxonomy.html %}
-	    </div>
-    {% endif %}
+		{% if page.path contains '_posts' and page.tags %}
+		    <div class="post__taxonomy">
+		      {% include taxonomy.html %}
+		    </div>
+	    {% endif %}
 
-    <br>
+	    <br>
+			
+		{% include sharing.html %}
 		
-	{% include sharing.html %}
-	
-	{% if page.path contains '_posts' and site.related_posts.size >= 3 %}
-		<div class="related">
-		  <h2>Related Posts</h2>
-		  <ul class="related-posts">
-		    {% for post in site.related_posts limit:4 %}
-		      <li>
-		        <h3>
-		          <a href="{{ site.baseurl }}{{ post.url }}">
-		            {{ post.title }}
-		            <small>{{ post.date | date_to_string }}</small>
-		          </a>
-		        </h3>
-		      </li>
-		    {% endfor %}
-		  </ul>
-		</div>
-	{% endif %}
-
-
-
-	{% if page.previous or page.next %}
-	<nav class="pagination">
-		{% if page.previous %}
-			<a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">
-				{{ site.data.locales.pt.previous}}
-			</a>
-		{% else %}
-			<a href="#" class="pagination--pager disabled">
-				{{ site.data.locales.pt.previous}}
-			</a>
+		{% if page.path contains '_posts' and site.related_posts.size >= 3 %}
+			<div class="related">
+			  <h2>Related Posts</h2>
+			  <ul class="related-posts">
+			    {% for post in site.related_posts limit:4 %}
+			      <li>
+			        <h3>
+			          <a href="{{ site.baseurl }}{{ post.url }}">
+			            {{ post.title }}
+			            <small>{{ post.date | date_to_string }}</small>
+			          </a>
+			        </h3>
+			      </li>
+			    {% endfor %}
+			  </ul>
+			</div>
 		{% endif %}
-		{% if page.next %}
-			<a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">
-				{{ site.data.locales.pt.next}}
-			</a>
-		{% else %}
-			<a href="#" class="pagination--pager disabled">
-				{{ site.data.locales.pt.next}}
-			</a>
+
+
+
+		{% if page.previous or page.next %}
+		<nav class="pagination">
+			{% if page.previous %}
+				<a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">
+					{{ site.data.locales.pt.previous}}
+				</a>
+			{% else %}
+				<a href="#" class="pagination--pager disabled">
+					{{ site.data.locales.pt.previous}}
+				</a>
+			{% endif %}
+			{% if page.next %}
+				<a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">
+					{{ site.data.locales.pt.next}}
+				</a>
+			{% else %}
+				<a href="#" class="pagination--pager disabled">
+					{{ site.data.locales.pt.next}}
+				</a>
+			{% endif %}
+		</nav>
 		{% endif %}
-	</nav>
-	{% endif %}
-	<br>
+		<br>
+	</div>
+
+	<footer class="post__footer container">
+	  {% include author.html %}
+	</footer>
+
+
+	<div class="container">
+	  {% include comments.html %}
+		
+	</div>
 </div>
-
-<footer class="post__footer">
-  {% include author.html %}
-</footer>
