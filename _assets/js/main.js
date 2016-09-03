@@ -52,6 +52,8 @@
       
         $('.article-entry img').materialbox();
 
+        $('select').niceSelect();
+
 
 
         // $('#search-query').lunrSearch({

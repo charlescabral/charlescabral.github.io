@@ -6,20 +6,33 @@ changefreq: monthly
 permalink: '/'
 ---
 
-<header class="nav-home navigation">
-    {% include navigation.html  %}
-    <button class="menu-control">
-		<svg class="ico"><use xlink:href="#icon-menu"></use></svg>
-	</button>
+<header>
+    {% include header.html navclass='header' %}
 </header>
 
-<section class="content-home">
-    <div class="container">
-        {% include social.html  %}
-    </div>
+<div class="container">
+	<section class="table">
+		<div class="table-cell">
 
-    {% include search.html  %}
-</section>
+			<h1>UI/UX DESIGNER & FRONT-END DEVELOPER</h1>
+			<ul class="topics">
+				<li>
+					<p>WEBDESIGN</p>
+				</li>
+				<li>
+					<p>MOBILE FIRST</p>
+				</li>
+				<li>
+					<p>WEBSTANDARTS</p>
+				</li>
+			</ul>
+		    {% include social.html %}
+		</div>
+	</section>
+</div>
+
+{% include search.html  %}
+
 
 
 

@@ -1,6 +1,9 @@
 .social-network {
+	text-align: center;
+
 	li {
 		display: inline-block;
+		margin: 10px;
 
 		a svg {
 		    @include transition(fill, .5s);

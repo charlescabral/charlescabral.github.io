@@ -1,3 +1,9 @@
+if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+}
+
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
