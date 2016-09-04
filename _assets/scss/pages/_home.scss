@@ -1,7 +1,7 @@
 .content-home {
 	background: $c-dark-primary;
 	height: 100vh;
-	padding-top: 66px;
+	padding-top: 8.5vh;
 
 	& > .container {
 		height: 100vh - 22;
@@ -11,6 +11,15 @@
 		@include fs-title;
 		color: $c-white;
 		text-align: center;
+		@include media($tablet) {
+			font-size: 32px;
+			line-height: 32px;
+			span{display: block;}
+		}
+		@include media($mobile) {
+			font-size: 26px;
+			line-height: 26px;
+		}
 	}
 
 	.topics {
@@ -27,6 +36,8 @@
 				display: inline-block;
 				vertical-align: baseline;
 				margin: 0 20px;
+
+				@include media($mobile) {margin: 0 10px;}
 			}
 
 			&:last-child {
