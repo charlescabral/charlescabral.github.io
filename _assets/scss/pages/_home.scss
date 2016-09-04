@@ -25,6 +25,9 @@
 	.topics {
 		text-align: center;
 		margin-bottom: em(80px);
+		@include media($mobile) {
+			margin-bottom: em(20px);
+		}
 
 		li {
 			display: inline-block;
