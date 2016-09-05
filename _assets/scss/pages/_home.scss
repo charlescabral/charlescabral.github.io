@@ -2,6 +2,7 @@
 	background: $c-dark-primary;
 	height: 100vh;
 	padding-top: 8.5vh;
+	@include box;
 
 	& > .container {
 		height: 100%;
@@ -12,12 +13,13 @@
 		color: $c-white;
 		text-align: center;
 		@include media($tablet) {
-			font-size: 32px;
-			line-height: 32px;
+			font-size: 33px;
+			line-height: 33px;
+			span {display: block;}
 		}
 		@include media($mobile) {
-			font-size: 26px;
-			line-height: 26px;
+			font-size: 20px;
+			line-height: 20px;
 		}
 	}
 

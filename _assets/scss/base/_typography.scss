@@ -45,6 +45,22 @@ a {
   }
 }
 
+i, 
+cite, 
+em, 
+var, 
+address, 
+dfn {
+  @include fs-italic;
+}
+
+code,
+kbd,
+pre,
+samp {
+  @include fs-code;
+}
+
 hr {
   border-bottom: $base-border;
   border-left: 0;

@@ -3,12 +3,3 @@ $sprite: map-get($icons, sprite) !default;
 // $baseFontSize: 16px !default;
 
 
-
-.quote {
-	&:before {
-		@include sprite(quote);
-		content: '';
-		float: left;
-		margin-right: 0.5em;
-	}
-}

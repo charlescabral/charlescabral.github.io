@@ -27,7 +27,6 @@
 }
 .article-entry {
     @include clearfix;
-    text-align: center;
     width: $s-article;
     margin: 0 auto;
     padding: em(40);
@@ -55,7 +54,9 @@
 
     p {
         text-align: justify;
-        font-size: em(14);
+        font-size: em(16px);
+        line-height: em(20px);
+        margin: em(20px) 0;
     }
 
     p code, li code, figcaption code {

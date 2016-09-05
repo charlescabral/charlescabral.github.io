@@ -45,7 +45,7 @@ var paths        = {
         src:    assets.src + 'img/svg/',
         dest:   assets.dest + 'img/svg/',
         sprite: assets.src + 'img/svg/sprite/*.svg',
-        file:   assets.src + 'img/svg/sprite_svg.svg',
+        file:   assets.src + 'img/svg/sprite-svg.svg',
         css:    assets.src + 'scss/helpers/_sprite_svg.scss'
     },
     templates: {
@@ -169,7 +169,7 @@ gulp.task('sprite_svg', function () {
             mode: {
                 css: {
                     dest: '../',
-                    layout: 'binary-tree',
+                    layout: 'vertical',
                     sprite: paths.svg.file,
                     bust: false,
                     render: {

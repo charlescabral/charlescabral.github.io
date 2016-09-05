@@ -34,8 +34,7 @@ _rendered as italicized text_
 
 ~~Strike through this text.~~
 
-> before any text you want to quote.<br>
-ine to be used for processing templates. Handlebars is the defaul.
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non dapibus turpis. Fusce at rhoncus lectus, in consectetur quam. Proin velit enim, pretium a arcu quis, tincidunt convallis ante. Nunc nec lectus mauris. Pellentesque lectus orci, consectetur at scelerisque nec, auctor sit amet risus. Cras auctor est non mauris bibendum condimentum.
 
 + Facilisis in `pretium` nisl aliquet
 + Nulla volutpat aliquam velit

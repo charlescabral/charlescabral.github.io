@@ -34,17 +34,20 @@ header {
     @include span-columns(3);
     @include transition(fill, .5s);
     @include animation-fill-mode(backwards);
-    @include size(32px);
-    padding: 0;
+    @include size(66px);
+    padding: 1em;
     border: 0;
     background: none;
-    fill: $c-white; 
-    margin: 16px 0;
+    fill: $c-white;
     display: none;
     float: right;
 
     &:hover { 
         // fill: darken($c-dark-primary, 20);
+    }
+
+    &:active {
+        
     }
     
     @include media($tablet) {

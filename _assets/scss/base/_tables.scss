@@ -1,6 +1,5 @@
 table {
   width: 100%;
-  border: $base-border;
   border-collapse: collapse;
   table-layout: fixed;
   margin-bottom: 1rem;
@@ -29,7 +28,7 @@ tbody tr:nth-child(odd) th {
 
 @include media($mobile) {
 
-  table {
+  table.responsive {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;

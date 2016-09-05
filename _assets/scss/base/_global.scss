@@ -1,34 +1,35 @@
 blockquote {
-  @include border-radius($base-border-radius);
   @include fs-italic;
-  background-color: $c-light-primary;
-  color: lighten($c-txt-primary, 40);
-  margin: 1.5em 10px;
-  padding: 1.1em;
-  display: inline-block;
-  font-size: em(16px);
-  line-height: em(16px);
-  font-style: italic;
+  color: $c-txt-primary;
+  padding: 0 em(18px);
+  margin: em(20px) 0 0;
+  display: block;
+  text-align: left;
+  font-size: em(20px);
+  line-height: em(22px);
   quotes: "\201C""\201D""\2018""\2019";
+  // border-left: solid 4px $c-dark-primary;
   position: relative;
+  text-align: center;
 
   &:before {
-    @include sprite(quote);
-    @include opacity(0.2);
-    content: "";
+    @include sprite(quote-start);
+    @include opacity(.1);
+    content: "";  
     display: block;
     z-index: 1;
     position: absolute;
-    top: -10px;
-    left: 20px;
+    top: 0px;
+    left: 0px;
   }
 
-  p { display: inline; }
+  p { 
+    display: inline-block;
+  }
 
   a { color: inherit; }
 
   cite {
-    // font-family: $sans-serif;
     font-size: 0.8rem;
     font-style: normal;
 
@@ -37,17 +38,4 @@ blockquote {
       padding-right: 5px;
     }
   }
-}
-
-
-
-
-
-
-code,
-kbd,
-pre,
-samp {
-  @include fs-code;
-  font-size: em(14px);
 }

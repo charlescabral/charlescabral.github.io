@@ -1,9 +1,8 @@
-$base-border-color: $c-gray;
-$base-border: 2px solid $base-border-color;
-
+$base-border-color:  $c-gray;
+$base-border:        2px solid $base-border-color;
 $base-border-radius: 3px;
-$base-spacing: 1em;
-$small-spacing: .25em;
+$base-spacing:       1em;
+$small-spacing:      .25em;
 
 // Animations
 $base-duration: 150ms;
@@ -33,8 +32,6 @@ $prefix-for-mozilla:   true;
 $prefix-for-microsoft: true;
 $prefix-for-opera:     true;
 $prefix-for-spec:      true;
-
-
 
 
 

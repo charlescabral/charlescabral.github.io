@@ -92,15 +92,16 @@
   appearance: $value;
 }
 
-
 @mixin overflow-scroll($value) {
   overflow: auto;
-  -webkit-overflow-scrolling: $value;
-  -moz-overflow-scrolling: $value;
-  -o-overflow-scrolling: $value;
-  -ms-overflow-scrolling: $value;
-  overflow-scrolling: $value;
+  @include prefixer(overflow-scrolling, $value, webkit moz o ms);
 }
+
+@mixin user-select($value) {
+  @include prefixer(user-select, $value, webkit moz o ms);
+}
+
+
 
 
 @mixin inline-block($align: middle) {
@@ -226,9 +227,9 @@
 // BOX SHADOW
 @mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $size: 5px, $color: rgba(0,0,0,.4), $inset: "") {
   @if ($inset != "") {
-    @include css3-prefix('box-shadow', $inset $x $y $blur $size $color);
+    @include prefixer(box-shadow, $inset $x $y $blur $size $color, webkit moz o ms);
   } @else {
-    @include css3-prefix('box-shadow', $x $y $blur $size $color);
+    @include prefixer(box-shadow, $x $y $blur $size $color, webkit moz o ms);
   }
 }
 
