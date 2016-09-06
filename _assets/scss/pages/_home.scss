@@ -1,7 +1,7 @@
 .content-home {
 	background: $c-dark-primary;
 	height: 100vh;
-	min-height: 568px;
+	min-height: $min-height;
 	padding-top: $nav-height;
 	@include box;
 

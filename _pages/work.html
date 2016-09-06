@@ -8,18 +8,16 @@ changefreq: monthly
 permalink: "/work/"
 ---
 
-<div class="container">
-	<ul>
-		{% for project in site.projects limit:4 %}
-			<li>
-				<a class="open-project" href="#{{project.url}}" data-modal="#modal-projects">
-					<h3>{{project.title}}</h3>
-					<img data-src="{{site.baseurl}}/assets/img/{{project.image}}" class="lazyload" />
-				</a>
-			</li>
-		{% endfor %}
-	</ul>
-</div>
+<ul>
+	{% for project in site.projects limit:4 %}
+		<li>
+			<a class="open-project" href="#{{project.url}}" data-modal="#modal-projects">
+				<h3>{{project.title}}</h3>
+				<img data-src="{{site.baseurl}}/assets/img/{{project.image}}" class="lazyload" />
+			</a>
+		</li>
+	{% endfor %}
+</ul>
 
 
 <div id="modal-projects">
