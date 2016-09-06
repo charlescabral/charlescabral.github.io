@@ -8,8 +8,8 @@ $tablet:  new-breakpoint(max-width $s-t, 8);
 $desktop: new-breakpoint(min-width $s-d, 12);
 
 .content { 
-	padding-top: 8.5vh;
-    min-height: 100vh;
+	@include clearfix;
+    min-height: 568px;
 }
 
 .full-container { @include outer-container(100%); }
@@ -23,12 +23,15 @@ $desktop: new-breakpoint(min-width $s-d, 12);
 
 .col-content {
 	@include span-columns(8);
+	@include clearfix;
 	@include media($mobile) {
 		@include span-columns(4);
+		margin: 0;
 	}
 }
 aside {
 	@include span-columns(4);
+	@include clearfix;
 	background-color: $c-light-primary;
 	padding: em(20);
 	@include media($mobile) {

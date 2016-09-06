@@ -1,15 +1,15 @@
 .article {
 
     > .header {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        background: lighten($c-dark-primary, 4);
+        padding: ($nav-height*2) 0 $nav-height;
+        background: $c-dark-primary;
+        text-align: center;
+        margin-bottom: $nav-height/2;
 
         .title {
             position: relative;
             @include fs-title;
             color: $c-white;
-            text-align: center;
             margin: 0;
 
             span {
@@ -23,8 +23,8 @@
             margin: 0;
         }
     }
-
 }
+
 .article-entry {
     @include clearfix;
     width: $s-article;
@@ -69,6 +69,12 @@
         &:before {
             letter-spacing: -0.2em;
             content: "\00a0";
+        }
+    }
+
+    blockquote {
+        p {
+            margin: em(10px) 0;
         }
     }
 

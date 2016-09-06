@@ -1,6 +1,6 @@
-
-
 footer.footer {
+  @include clearfix;
+  clear: both;
   margin-top: 20px;
   background-color: $c-light-primary;
 

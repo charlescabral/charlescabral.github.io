@@ -3,18 +3,25 @@
 
 	li {
 		display: inline-block;
-		margin: 10px;
 
-		a svg {
-		    @include transition(fill, .5s);
-		    @include animation-fill-mode(backwards);
-		    @include size(30px);
-		    margin: 12px 0;
-		    fill: $c-white;
+		a {
+			display: block;
+			padding: em(10px);
 
-		    &:hover {
-		        // fill: darken($c-dark-primary, 20);
-		    }
+			svg {
+			    @include transition(fill, .5s);
+			    @include animation-fill-mode(backwards);
+			    @include size(30px);
+			    display: block;
+			    fill: $c-white;
+
+			    &:hover {
+			        // fill: darken($c-dark-primary, 20);
+			    }
+			    @include media($mobile) {
+			    	@include size(20px);
+			    }
+			}
 		}
 	}
 }

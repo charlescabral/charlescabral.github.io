@@ -101,15 +101,12 @@
   @include prefixer(user-select, $value, webkit moz o ms);
 }
 
-
-
-
 @mixin inline-block($align: middle) {
   display: inline-block;
   vertical-align: $align;
 }
 
-.clearfix {
+@mixin clearfix{
   *zoom: 1;
   &:before,
   &:after {

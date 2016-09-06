@@ -4,25 +4,27 @@ header {
     }
 }
 
-.brand {
-	@include span-columns(3);
-    @include transition(fill, .5s);
-    @include animation-fill-mode(backwards);
-    margin: 12px 0;
-    fill: $c-white;
-    &:hover {
-        // fill: darken($c-dark-primary, 20);
-    }
-    svg {
-        @include size(38px);
+.col-brand {
+    @include span-columns(3);
+
+    .brand {
+        @include transition(fill, .5s);
+        @include size($nav-height);
+        padding: .8em;
+        border: 0;
+        background: none;
+        fill: $c-white;
+        display: block;
+
+        &:hover {
+            // fill: darken($c-dark-primary, 20);
+        }
     }
 }
 
 .open-search {
     fill: $c-white;
-    margin: 20px 0;
     display: block;
-    @include size(26px);
 
     svg {
         @include size(26px);
@@ -31,9 +33,7 @@ header {
 
 
 .menu-control {
-    @include span-columns(3);
     @include transition(fill, .5s);
-    @include animation-fill-mode(backwards);
     @include size(66px);
     padding: 1em;
     border: 0;
@@ -63,9 +63,7 @@ header {
     top: 0; 
     left: 0;
     width: 100%;
-    background: $c-dark-primary;
     z-index: 10;
-
 
     &.fixed {
         position: fixed;
@@ -78,6 +76,18 @@ header {
         position: relative;
         ul {
             float: none;
+        }
+    }
+    
+    
+    .row {
+        padding: 0;
+        margin: 0;
+        @include clearfix;
+
+        @include media($tablet) {
+            margin-right: -($gutter*2);
+            margin-left: -($gutter*2);
         }
     }
 

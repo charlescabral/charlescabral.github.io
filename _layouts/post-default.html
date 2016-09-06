@@ -6,14 +6,14 @@ layout: default
 
     <header class="header article">
         <div class="container">
+        	<h1 class="title">{{ page.title }}</h1>
+			<h2 class="subtitle">{{ page.date | date: "%d %b %Y" }}</h2>
         </div>
     </header>
     
 	<div class="article-entry"> 
 
-        <h1 class="title">{{ page.title }}</h1>
 
-		{{ page.date | date: "%d %b %Y" }}
 	        <div class="content">
 				{{content}}
 			</div>
@@ -84,6 +84,5 @@ layout: default
 
 	<div class="container">
 	  {% include comments.html %}
-		
 	</div>
 </div>
