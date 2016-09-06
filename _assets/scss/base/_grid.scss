@@ -9,7 +9,7 @@ $desktop: new-breakpoint(min-width $s-d, 12);
 
 .content { 
 	@include clearfix;
-    min-height: 568px;
+    min-height: 454px;
 }
 
 .full-container { @include outer-container(100%); }
