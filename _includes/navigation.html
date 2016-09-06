@@ -1,4 +1,4 @@
-<ul class="nav-itens">
+<ul class="navigation {{include.position}}">
 	<li><a class="item {% if page.url == '/' %}current{% endif %}" href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
 	<li><a class="item {% if page.url == '/about/' %}current{% endif %}" href="{{ "/about/" | prepend: site.baseurl }}">About</a></li>
 	<li><a class="item {% if page.url == '/work/' %}current{% endif %}" href="{{ "/work/" | prepend: site.baseurl }}">Work</a></li>
@@ -12,6 +12,12 @@
 	</li>
 	<li><a class="item {% if page.url == '/contact/' %}current{% endif %}" href="{{ "/contact/" | prepend: site.baseurl }}">Contact</a></li>
 	<li>
-		<a class="item open-search" href="javascript:void(0)" data-modal="#modal-search">Search</a>
+		<a class="item open-search" href="javascript:void(0)" data-modal="#modal-search">
+		{% if include.position == 'menu-side' %}
+			Search
+		{% else %}
+			<svg class="ico"><use xlink:href="#zoom"></use></svg>
+		{% endif %}
+		</a>
 	</li>
 </ul>

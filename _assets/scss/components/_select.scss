@@ -71,7 +71,8 @@
   
   // List and options
   .list {
-    background-color: #fff;
+    background-color: $c-dark-primary;
+    color: $c-white;
     border-radius: $base-border-radius;
     margin-top: 4px;
     opacity: 0;
@@ -85,7 +86,6 @@
     @include box-sizing(border-box);
     @include transform-origin(50% 0);
     @include transform(scale(.75) translateY(- 42px / 2));
-    @include box-shadow(0, 12px, 15px, 0, rgba($c-black, .3));
     @include transition(all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out);
 
     &:hover .option:not(:hover) {
@@ -94,24 +94,35 @@
   }
   .option {
     cursor: pointer;
-    line-height: 16px;
-    font-size: 16px;
+    line-height: 18px;
+    font-size: 18px;
     list-style: none;
     outline: none;
     text-align: left;
-    padding: em(14px);
+    position: relative;
+    padding: em(14px) em(14px) em(14px) em(46px);
     @include transition(all .2s);
 
     &:hover, &.focus { 
-      background-color: $c-light-primary;
+      background-color: lighten($c-dark-primary, 8);
     }
-    &.selected { 
-      color: $c-alert-success;
-    }
+    &.selected {}
     &.disabled {
       background-color: transparent;
-      color: $c-txt-primary;
+      display: none;
       cursor: default;
+    }
+
+    @include media($mobile) {font-size: 16px;}
+
+    .ico {
+      @include size(34px);
+      display: block;
+      position: absolute;
+      left: em(7px);
+      top: em(7px);
+
+      svg {fill: $c-white;}
     }
   }
 }

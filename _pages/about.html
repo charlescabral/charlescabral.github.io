@@ -6,24 +6,22 @@ changefreq: monthly
 permalink: "/about/"
 ---
 
-<div class="container">
-	{% if site.data.settings.skills %}
+{% if site.data.settings.skills %}
 
-		<h3>Skills</h3>
-		<ul class="skill-lockup">
+	<h3>Skills</h3>
+	<ul class="skill-lockup">
 
-			{% for skill in site.data.settings.skills %}
+		{% for skill in site.data.settings.skills %}
 
-				<li class="skill-unit">
-					<span class="skill-label">{{ skill.name }}</span>
-					<span class="skill-level_{{ skill.value }}">
-						{{ skill.value }}
-					</span>
-				</li>
+			<li class="skill-unit">
+				<span class="skill-label">{{ skill.name }}</span>
+				<span class="skill-level_{{ skill.value }}">
+					{{ skill.value }}
+				</span>
+			</li>
 
-			{% endfor %}
+		{% endfor %}
 
-		</ul>
+	</ul>
 
-	{% endif %}
-</div>
+{% endif %}

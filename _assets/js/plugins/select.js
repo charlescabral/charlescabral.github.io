@@ -71,10 +71,14 @@
       
       $options.each(function(i) {
         var $option = $(this);
+        var $class  = $(this).data('class');
+        var $svg    = $(this).data('svg');
         var display = $option.data('display');
 
         $dropdown.find('ul').append($('<li></li>')
           .attr('data-value', $option.val())
+          .attr('class', $class)
+          .attr('data-id', $svg)
           .attr('data-display', (display || null))
           .addClass('option' +
             ($option.is(':selected') ? ' selected' : '') +
