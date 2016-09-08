@@ -1,9 +1,3 @@
-header {
-    &.opacity {
-        @include opacity(0);
-    }
-}
-
 .col-brand {
     @include span-columns(3);
 
