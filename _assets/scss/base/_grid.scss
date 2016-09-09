@@ -5,13 +5,17 @@ $s-d: $max-width !default;
 
 $mobile:  new-breakpoint(max-width $s-m, 4); 
 $tablet:  new-breakpoint(max-width $s-t, 8); 
+$article:  new-breakpoint(max-width $s-article, 8); 
 $desktop: new-breakpoint(min-width $s-d, 12);
 
 .content { 
 	@include clearfix;
     min-height: $min-height;
     background-color: $c-white;
-    padding-bottom: $nav-height;
+    padding-bottom: $spacing;
+    @include media($article) {
+       padding-bottom: ($spacing/3);
+    }
 }
 
 .full-container { @include outer-container(100%); }

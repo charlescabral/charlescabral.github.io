@@ -85,5 +85,20 @@ $.fn.insertSvg = function(method) {
 		html = '<i class="ico"><svg><use xlink:href="'+ svg +'"></use></svg></i>';
 	el.append(html);
 };
-// var id = el.data('svg');
-// var text = '<svg class="ico"><use xlink:href="#zoom"></use></svg>';
+
+
+
+$(function() {
+  $('.scroll-to').on('click', function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});

@@ -40,7 +40,9 @@ ul.navigation {
                 }
 
             }
-            .open-search {padding: 1.2em 0 .8em;}
+            .open-search {
+                padding: 1.2em 0 .8em;
+            }
             .icon-home {
                 padding: 1em 0 .8em;
                 @include opacity(.4);
@@ -61,6 +63,7 @@ ul.navigation {
         overflow: hidden;
         position: relative;
         width: 100%;
+
         @include clearfix;
 
         > li {

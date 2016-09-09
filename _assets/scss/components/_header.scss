@@ -43,6 +43,7 @@
     fill: $c-white;
     display: none;
     float: right;
+    outline: none;
 
     &:hover { 
         // fill: darken($c-dark-primary, 20);

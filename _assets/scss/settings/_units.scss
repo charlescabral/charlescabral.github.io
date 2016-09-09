@@ -1,8 +1,13 @@
 $base-border-color:  $c-gray;
 $base-border:        2px solid $base-border-color;
 $base-border-radius: 3px;
+
 $base-spacing:       1em;
 $small-spacing:      .25em;
+
+$spacing: 66px;
+$nav-height: 66px;
+$min-height: 400px;
 
 // Animations
 $base-duration: 150ms;
@@ -15,8 +20,6 @@ $visual-grid-color: red;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.1; 
 
-$nav-height: 66px;
-$min-height: 400px;
 
 $max-width: 1200px;
 $column: 92px;

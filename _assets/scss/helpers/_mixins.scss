@@ -347,6 +347,10 @@
   @include css3-prefix('transition', $duration $ease);
 }
 
+@mixin transition-delay($delay) {
+  @include css3-prefix('transition-delay', $delay);
+}
+
 // TRIPLE BORDERS
 @mixin triple-borders($colorOne: #3C3C3C, $colorTwo: #999999, $colorThree: #000000, $radius: 0) {
     border: 1px solid $colorOne;

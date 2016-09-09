@@ -49,7 +49,7 @@ $hinge-translate 				: 700px !default;
 
 $use-all                :   false !default; // all animations status
 $use-fade               :   true !default; // all fades
-$use-bounce             :   $use-all !default; // all bounces
+$use-bounce             :   true !default; // all bounces
 $use-rotate             :   $use-all !default; // all rotates
 $use-slide              :   true !default; // all slide animations
 $use-flipers            :   $use-all !default; // all flip animations

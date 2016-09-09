@@ -67,7 +67,7 @@
         id.css(initStyles);
 
         modal.click(function(event) {
-            $('body, html').css({'overflow':'hidden'});
+            $('body').css({'overflow':'hidden'});
             if (data == idConc) {
                 if (id.hasClass(settings.modalTarget+'-off')) {
                     id.removeClass(settings.animatedOut);
@@ -87,7 +87,7 @@
         closeBt.click(function(event) {
             event.preventDefault();
             $('.modal-content').fadeOut('300', function() { $(this).html('') });
-            $('body, html').css({'overflow':'auto'});
+            $('body').css({'overflow':'auto'});
             var $history = history;
             $history.pushState('', document.title, window.location.pathname);
 

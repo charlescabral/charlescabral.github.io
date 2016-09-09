@@ -1,10 +1,15 @@
 .article {
 
     > .header {
-        padding: ($nav-height*2) 0 $nav-height;
+        padding: ($spacing*2) 0 $spacing;
         background: $c-dark-primary;
         text-align: center;
-        margin-bottom: $nav-height;
+        margin-bottom: $spacing;
+        position: relative;
+
+        @include media($article) {
+           margin-bottom: ($spacing/3);
+        }
 
         .title {
             position: relative;
@@ -24,7 +29,35 @@
         }
 
         &.header-post {
-            padding: ($nav-height*3) 0;
+            padding: ($spacing*3) 0;
+
+            @include media($article) {
+               min-height: 100vh;
+            }
+        }
+    }
+
+    .arrow-down {
+        @include animation(bounce 2s infinite);
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: ($spacing/2);
+        margin: 0 auto;
+        display: none;
+
+
+        svg {
+            @include transition(fill, .5s);
+            @include size(50px);
+            border: 0;
+            background: none;
+            fill: $c-white;
+        }
+
+        @include media($article) {
+           display: block;
         }
     }
 }
@@ -34,11 +67,11 @@
     width: $s-article;
     margin: 0 auto;
     padding: em(40);
-    top: -($nav-height*3);
+    top: -($spacing*3);
     position: relative;
     background: $c-white;
 
-    @include media(max-width $s-article) {
+    @include media($article) {
         width: 100%;
         top: 0;
         padding: em(20);
