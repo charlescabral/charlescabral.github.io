@@ -8,7 +8,7 @@ layout: null
       "href"     : "{{ post.url }}",
       "date"     : {
          "day"   : "{{ post.date | date: "%d" }}",
-         "month" : "{{ post.date | date: "%B" }}",
+         "month" : "{{ post.date | date: "%b" }}",
          "year"  : "{{ post.date | date: "%Y" }}"
       }
     }

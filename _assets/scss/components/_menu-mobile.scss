@@ -3,6 +3,11 @@ body {
   height: 100%;
 }
 
+#panel,
+#menu-mobile {
+	@include transition(all, .5s);
+}
+
 #menu-mobile {
 	background-color: $c-light-primary;
 	position: fixed;

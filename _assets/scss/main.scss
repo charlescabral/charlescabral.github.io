@@ -2,13 +2,10 @@
 @import 
 	'settings/colors',
 	'settings/units',
+	'settings/animations',
 	'settings/typography';
 
 // Helpers           ---------------------------------------- //
-
-// 'helpers/neat/neat',
-// 'helpers/bourbon/bourbon',
-
 @import 
 	'bourbon',
 	'neat',
@@ -18,23 +15,30 @@
 	'helpers/mixin_sprite',
 	'helpers/nprogress',
 	'helpers/box-image',
+	'helpers/tooltip',
 	'helpers/functional';
 // @import "tools/waves";
+// 'helpers/neat/neat',
+// 'helpers/bourbon/bourbon',
 
 // Generic         ---------------------------------------- //
-
-// 'generic/normalize';
 @import 
 	'normalize';
+// 'generic/normalize';
 
 // Base            ---------------------------------------- //
 @import 
-	'base/base';
+	'base/grid',
+	'base/buttons',
+	'base/forms',
+	'base/lists',
+	'base/tables',
+	'base/global',
+	'base/typography';
 
 // Components      ---------------------------------------- //
 @import
 	'components/syntax-highlighting',
-	'components/icons',
 	'components/header',
 	'components/navigation',
 	'components/article',
@@ -46,14 +50,9 @@
 	'components/select',
 	'components/search';
 
-
 // Pages           ---------------------------------------- //
 @import 
 	'pages/home',
 	'pages/contact',
 	'pages/work',
 	'pages/styleguide';
-
-// Trump           ---------------------------------------- //
-// @import "trump/...";
-// 

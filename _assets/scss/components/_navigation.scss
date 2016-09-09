@@ -12,6 +12,8 @@ ul.navigation {
 
             &:last-child() {
                 padding-right: 0;
+                padding-left: 0;
+                margin-left: 1em;
             }
 
             .item {
@@ -20,7 +22,6 @@ ul.navigation {
                 padding: em(23px) 0;
                 font-size: 16px;
                 color: $c-white;
-                text-transform: uppercase;
 
                 &:after {
                     content: '';
@@ -36,6 +37,17 @@ ul.navigation {
                 &:hover:after,
                 &.current:after {
                     background: $c-white;
+                }
+
+            }
+            .open-search {padding: 1.2em 0 .8em;}
+            .icon-home {
+                padding: 1em 0 .8em;
+                @include opacity(.4);
+
+                &:hover,
+                &.current {
+                    @include opacity(1);
                 }
             }
         }

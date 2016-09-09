@@ -25,6 +25,15 @@
     }
 }
 
+.icon-home {
+    fill: $c-white;
+    display: block;
+
+    svg {
+        @include size(26px);
+    }
+}
+
 .menu-control {
     @include transition(fill, .5s);
     @include size(66px);

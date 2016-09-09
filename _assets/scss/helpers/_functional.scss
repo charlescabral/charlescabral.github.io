@@ -24,3 +24,5 @@
 	width: 100%;
 	vertical-align: middle;
 }
+
+.blur { @include blur(4) }

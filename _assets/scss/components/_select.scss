@@ -116,11 +116,11 @@
     @include media($mobile) {font-size: 16px;}
 
     .ico {
-      @include size(34px);
+      @include size(22px);
       display: block;
       position: absolute;
-      left: em(7px);
-      top: em(7px);
+      left: em(12px);
+      top: em(12px);
 
       svg {fill: $c-white;}
     }

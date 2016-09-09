@@ -84,8 +84,6 @@
             } 
         });
 
-        if(window.location.hash) { modal.click() }
-
         closeBt.click(function(event) {
             event.preventDefault();
             $('.modal-content').fadeOut('300', function() { $(this).html('') });

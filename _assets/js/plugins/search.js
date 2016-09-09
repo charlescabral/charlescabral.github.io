@@ -38,12 +38,12 @@ function getSearchJSON()
         e.html(function() {
             if (results.length == 0)
             {
-                e.append('<li style="padding-top: 3px; padding-bottom: 3px"><a style="color: #999; word-wrap: break-word; white-space: normal" href="#">No results found</a></li>');
+                e.append('<li class="not-found"><p><span class="puts">Puts!</span>Nenhum post foi encontrado</p></li>');
             }
             else
             {
                 $.each(results, function(t, n) {
-                    e.append('<li style="padding-top: 3px; padding-bottom: 3px"><a style="color: #999; word-wrap: break-word; white-space: normal" href="' + n[1] + '">' + n[0] + '</a></li>');
+                    e.append('<li class="results"><a href="' + n[1] + '"><span class="text">' + n[0] + '</span><span class="date">' + n[2].day +' '+ n[2].month +' '+ n[2].year + '</span></a></li>');
                 });
             }
         });

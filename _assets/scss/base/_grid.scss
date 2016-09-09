@@ -10,6 +10,8 @@ $desktop: new-breakpoint(min-width $s-d, 12);
 .content { 
 	@include clearfix;
     min-height: $min-height;
+    background-color: $c-white;
+    padding-bottom: $nav-height;
 }
 
 .full-container { @include outer-container(100%); }
