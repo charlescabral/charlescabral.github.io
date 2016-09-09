@@ -1,11 +1,12 @@
 .highlight {
+    @include overflow-scroll(touch);
+    @include border-radius($base-border-radius);
     background-color: $c-black;
     color: $c-white;
     text-align: left;
     font-size: em(12px);
     line-height: em(22px);
     padding: em(20px);
-    @include border-radius($base-border-radius);
     overflow: auto;
     margin: {
         top: 10px;
