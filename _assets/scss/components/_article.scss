@@ -22,6 +22,10 @@
             color: $c-white;
             margin: 0;
         }
+
+        &.header-post {
+            padding: ($nav-height*3) 0;
+        }
     }
 }
 
@@ -30,7 +34,7 @@
     width: $s-article;
     margin: 0 auto;
     padding: em(40);
-    top: em(-60);
+    top: -($nav-height*3);
     position: relative;
     background: $c-white;
 

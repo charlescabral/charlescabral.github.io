@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Volkhov:400i|Roboto+Mono:400|Work+Sans:400,700|Merriweather:900);
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400|Work+Sans:400,700|Merriweather:900|Volkhov:400i');
 
 $font-light:   'Work Sans', sans-serif;
 $font-regular: 'Work Sans', sans-serif;
@@ -21,6 +21,10 @@ $heading-line-height: 1.2;
   font-size:   42px;
   font-family: $font-bold;
   font-weight: 500;
+  @include media($mobile) {
+    font-size: 34px;
+    line-height: 36px;
+  }
 }
 
 @mixin fs-subtitle {
