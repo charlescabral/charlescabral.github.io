@@ -13,7 +13,7 @@ permalink: "/work/"
 		<li>
 			<a class="open-project" href="#{{project.url}}" data-modal="#modal-projects">
 				<h3>{{project.title}}</h3>
-				<img data-src="{{site.baseurl}}/assets/img/{{project.image}}" class="lazyload" />
+				<img data-src="{{site.baseurl}}{{site.data.settings.projects.path}}{{project.image}}" class="lazyload" />
 			</a>
 		</li>
 	{% endfor %}

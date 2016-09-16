@@ -4,15 +4,12 @@
 owner:
   name: "Charles Cabral"
   email: charles.cabral.neto@gmail.com
-  bio: "Just another boring, tattooed, time traveling designer."
+  bio: "Just another boring, musician, time traveling designer."
   avatar: travitar.jpg
   disqus-shortname: Charles
   social:
     - {icon: 'twitter', link: 'http://twitter.com/charlescabral'}
     - {icon: 'linkedin', link: 'http://www.linkedin.com/in/charlescabral/'}
-
-
-
 
 #-------------------------------
 # About Section
@@ -27,6 +24,21 @@ skills:
 - {name: Programming, value: '6'}
 #-------------------------------
 
+
+
+
+#-------------------------------
+# Projects
+projects:
+  path: '/assets/img/projects/' 
+# - title: Webdesign
+#   folder: web
+
+# - title: Branding
+#   folder: brand
+
+# - title: Coding
+#   folder: code
 
 
 # SEO Section

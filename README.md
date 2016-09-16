@@ -4,10 +4,8 @@ It's still under construction :)
 
 Todo: 
 
-- [x] Landing page
 - [x] Blog feature
-- [ ] Portfolio
-- [ ] Write more blogs :smile:
+- [x] Portfolio
 
 ## How to run
 
@@ -42,9 +40,6 @@ Email: charles.cabral.neto@gmail.com
 Jekyll (for building static web)  
 <http://jekyllrb.com>
 
-Mickey Theme (Jekyll theme that I use to get start my own website)  
-<https://github.com/vincentchan/mickey>
-
 Github Page (for hosting from your GitHub repository)  
 <https://pages.github.com>
 
@@ -57,24 +52,11 @@ Sass (preprocessor css)
 Gulp (task runner)  
 <http://gulpjs.com>
 
-Gulp plugins:  
-- concurrent-transform 
-- gulp-autoprefixer 
-- gulp-clean-css 
-- gulp-rename
-- gulp-sass
-- gulp-changed
-- gulp-concat
-- gulp-uglify
-- gulp-uncss
-- gulp-image-resize
+Gulp plugins: 
 - gulp-imagemin
 
 Browsersync (for live-server & for testing UI in multi-devices) 
 <http://www.browsersync.io>
-
-Snap svg (for svg animation)
-<http://snapsvg.io>
 
 Cloudflare (for https & optimization)  
 <https://www.cloudflare.com>
@@ -82,11 +64,6 @@ Cloudflare (for https & optimization)
 Disqus (free commenting service)  
 <https://disqus.com>
 
-Codepen (for marking code example)  
-<http://codepen.io>
-
-Codrops (a web design and development blog that has great inspirational articles for font-end dev)
-<http://tympanus.net/codrops>
 
 ---
 
@@ -95,14 +72,6 @@ Codrops (a web design and development blog that has great inspirational articles
 Lato (font)  
 <https://www.google.com/fonts/specimen/Lato>
 
-Cabin Sketch (font)  
-<https://www.google.com/fonts/specimen/Cabin+Sketch>
-
-Short Stack (font)  
-<https://www.google.com/fonts/specimen/Short+Stack>
-
-Icomoon (icons)  
-<https://icomoon.io/app>
 
 ---
 

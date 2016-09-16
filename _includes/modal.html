@@ -1,12 +1,36 @@
 {% if {{include.position}} == 'top' %}
+	
 	<div class="head">	
 		<h1>{{page.title}}</h1>
 
-		<img data-src="{{site.baseurl}}/assets/img/{{page.image}}" class="lazyload" />
+		<img data-src="{{site.baseurl}}{{site.data.settings.projects.path}}{{page.image}}" class="lazyload" />
 	</div>
+
 {% else %}
+
 	<div class="foot">
-		footer
+		{% if project.previous or project.next %}
+		<nav class="pagination">
+			{% if project.previous %}
+				<a href="{{ base_path }}{{ project.previous.url }}" class="pagination--projectr" title="{{ project.previous.title | markdownify | strip_html }}">
+					previous
+				</a>
+			{% else %}
+				<a href="#" class="pagination--projectr disabled">
+					previous
+				</a>
+			{% endif %}
+			{% if project.next %}
+				<a href="{{ base_path }}{{ project.next.url }}" class="pagination--projectr" title="{{ page.next.title | markdownify | strip_html }}">
+					next
+				</a>
+			{% else %}
+				<a href="#" class="pagination--pager disabled">
+					next
+				</a>
+			{% endif %}
+		</nav>
+		{% endif %}
 	</div>
 
 {% endif %}

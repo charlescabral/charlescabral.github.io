@@ -58,21 +58,21 @@ layout: default
 		{% if page.previous or page.next %}
 		<nav class="pagination">
 			{% if page.previous %}
-				<a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">
-					{{ site.data.locales.pt.previous}}
+				<a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager hint--top" data-hover="{{ page.previous.title | markdownify | strip_html }}" title="{{ page.previous.title | markdownify | strip_html }}">
+					previous
 				</a>
 			{% else %}
 				<a href="#" class="pagination--pager disabled">
-					{{ site.data.locales.pt.previous}}
+					previous
 				</a>
 			{% endif %}
 			{% if page.next %}
-				<a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">
-					{{ site.data.locales.pt.next}}
+				<a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager hint--top" data-hover="{{ page.next.title | markdownify | strip_html }}" title="{{ page.next.title | markdownify | strip_html }}">
+					next
 				</a>
 			{% else %}
 				<a href="#" class="pagination--pager disabled">
-					{{ site.data.locales.pt.next}}
+					next
 				</a>
 			{% endif %}
 		</nav>

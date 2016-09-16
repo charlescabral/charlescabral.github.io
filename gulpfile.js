@@ -195,7 +195,7 @@ gulp.task('svg_png', function() {
 
 // Minify Images
 gulp.task('images', function () {
-    return gulp.src(paths.img.src + '**/*')
+    return gulp.src(paths.img.src + '**/**/*')
         .pipe(plumber({errorHandler: onError}))
         .pipe(imagemin({
             progressive: true

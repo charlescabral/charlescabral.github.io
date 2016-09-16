@@ -47,7 +47,7 @@ $hinge-translate 				: 700px !default;
 // Hugely influenced and inspired by @csswizardry's inuit.css _vars.scss file                       //
 //==================================================================================================//
 
-$use-all                :   false !default; // all animations status
+$use-all                :   true !default; // all animations status
 $use-fade               :   true !default; // all fades
 $use-bounce             :   true !default; // all bounces
 $use-rotate             :   $use-all !default; // all rotates

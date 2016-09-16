@@ -7,7 +7,12 @@
 
 	&.modal-projects-on {
 		@include box-shadow(0px, 10px, 34px, 10px, $c-black);
+		overflow: auto;
 	}
+	&.modal-projects-off {
+		overflow: hidden!important;		
+	}
+
 
 	.modal-content {}
 }
