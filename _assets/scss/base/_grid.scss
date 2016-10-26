@@ -1,8 +1,3 @@
-$s-m: 480px !default;
-$s-t: 992px !default;
-$s-article: 840px !default;
-$s-d: $max-width !default;
-
 $mobile:  new-breakpoint(max-width $s-m, 4); 
 $tablet:  new-breakpoint(max-width $s-t, 8); 
 $article:  new-breakpoint(max-width $s-article, 8); 
@@ -23,7 +18,11 @@ $desktop: new-breakpoint(min-width $s-d, 12);
 	@include clearfix;
 	@include outer-container;
 	@include media(max-width $max-width + ($gutter*6)) {
-		margin: 0 ($gutter*2);
+		margin: 0 ($gutter);
+	}
+
+	&.default {
+		padding-top: $nav-height;
 	}
 }
 

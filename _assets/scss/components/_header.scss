@@ -44,6 +44,12 @@
     display: none;
     float: right;
     outline: none;
+    
+    .close {display: none;}
+    &.active {
+        .open {display: none;}
+        .close {display: block;}
+    }
 
     &:hover { 
         // fill: darken($c-dark-primary, 20);
@@ -60,16 +66,30 @@
 
 
 .header-nav {
-    position: absolute;
+    position: fixed;
     top: 0; 
     left: 0;
     width: 100%;
     z-index: 10;
+    background-color: $c-dark-primary;
+
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
+    transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
+    -webkit-transition-property: height, padding-top, padding-left;
+    transition-property: height, padding-top, padding-left;
 
     &.fixed {
         position: fixed;
         will-change: transform;
         @include box-shadow(0, -3px, 9px, 0, $c-black);
+    }
+
+    &.-hide {
+        // -webkit-transform: translateY( -100% );
+        // -ms-transform: translateY( -100% );
+        // transform: translateY( -100% );
     }
 
     &.nav-home {
@@ -86,8 +106,8 @@
         @include clearfix;
 
         @include media($tablet) {
-            margin-right: -($gutter*2);
-            margin-left: -($gutter*2);
+            margin-right: -$gutter;
+            margin-left: -$gutter;
         }
     }
 }

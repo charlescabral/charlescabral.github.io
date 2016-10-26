@@ -1,40 +1,44 @@
-$base-border-color:  $c-gray;
-$base-border:        2px solid $base-border-color;
-$base-border-radius: 3px;
+$base-border:                         2px solid $base-border-color;
+$base-border-radius:                  4px;
 
-$base-spacing:       1em;
-$small-spacing:      .25em;
+$base-spacing:                        10px;
+$small-spacing:                       14px;
+$spacing:                             40px;
 
-$spacing: 66px;
-$nav-height: 66px;
-$min-height: 400px;
+$nav-height:                          66px;
+$min-height:                          400px;
+$margin-mobile:                       10px;
 
-// Animations
-$base-duration: 150ms;
-$base-timing: ease;
+$max-width:                           1020px;
+$column:                              65px;
+$gutter:                              20px;
+$grid-columns:                        12;
+$sidemenu-width:                      306px;
+$sidemenu-index:                      99999;
+$default-feature:                     min-width;
+
+$s-m:                                 425px !default;
+$s-t:                                 768px !default;
+$s-article:                           714px !default;
+$s-d:                                 $max-width !default;
 
 
-// Config Bourbon
-$visual-grid: false;
-$visual-grid-color: red;
-$visual-grid-index: front;
-$visual-grid-opacity: 0.1; 
+$base-duration:                       300ms;
+$base-timing:                         ease;
 
+$visual-grid:                         false;
+$visual-grid-color:                   red;
+$visual-grid-index:                   front;
+$visual-grid-opacity:                 0.1; 
 
-$max-width: 1200px;
-$column: 92px;
-$gutter: 10px;
-$grid-columns: 12;
-
-$default-feature: min-width;
-$border-box-sizing: true !default;
-$disable-warnings: false !default;
-
-$asset-pipeline: true;
+$border-box-sizing:                   true !default;
+$disable-warnings:                    false !default;
+$asset-pipeline:                      true;
 $output-bourbon-deprecation-warnings: true;
+$prefix-for-webkit:                   true;
+$prefix-for-mozilla:                  true;
+$prefix-for-microsoft:                true;
+$prefix-for-opera:                    true;
+$prefix-for-spec:                     true;
 
-$prefix-for-webkit:    true;
-$prefix-for-mozilla:   true;
-$prefix-for-microsoft: true;
-$prefix-for-opera:     true;
-$prefix-for-spec:      true;
+

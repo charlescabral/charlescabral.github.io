@@ -5,7 +5,7 @@ owner:
   name: "Charles Cabral"
   email: charles.cabral.neto@gmail.com
   bio: "Just another boring, musician, time traveling designer."
-  avatar: travitar.jpg
+  avatar: layout/travitar.jpg
   disqus-shortname: Charles
   social:
     - {icon: 'twitter', link: 'http://twitter.com/charlescabral'}

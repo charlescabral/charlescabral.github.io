@@ -3,19 +3,30 @@
 
         lazySizes.init();
 
-    	var slideout = new Slideout({
-    		'panel': document.getElementById('panel'),
-    		'menu': document.getElementById('menu-mobile'),
-    		'padding': 256,
-    		'tolerance': 70,
+        var panel,
+            menu;
+
+        function loaded () {
+            panel = new IScroll('#panel', { mouseWheel: true });
+            menu  = new IScroll('#menu-mobile', { mouseWheel: true });
+        }
+
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+        var slideout = new Slideout({
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('menu-mobile'),
+            'padding': 256,
+            'tolerance': 70,
             'side': 'right',
             'touch': false
-    	});
+        });
 
-    	// Toggle button
+        // Toggle button
         $('.menu-control').on('click', function(){
             if ($(this).hasClass('active')) {
                 slideout.close();
+                // main.iScroll.refresh();
                 $(this).removeClass('active');
                 $('#menu-mobile, #panel').removeClass('on');
                 $('#menu-mobile, #panel').addClass('off');
@@ -87,31 +98,5 @@
         $('.svg-icon').each( function() { $(this).insertSvg() });
         
         $('.article-entry img').materialbox();
-
-        $(function(){
-            'use strict';
-            var $page = $('#main'),
-            options = {
-                debug: true,
-                prefetch: true,
-                cacheLength: 2,
-                onStart: {
-                    duration: 250, 
-                    render: function ($container) {
-                        $container.addClass('is-exiting');
-                        smoothState.restartCSSAnimations();
-                    }
-                },
-                onReady: {
-                    duration: 0,
-                    render: function ($container, $newContent) {
-                        $container.removeClass('is-exiting');
-                        $container.html($newContent);
-                    }
-                }
-            },
-            smoothState = $page.smoothState(options).data('smoothState');
-        });
-
     });
 })(jQuery);

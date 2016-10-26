@@ -1,5 +1,5 @@
 // ============= VARS ============= //
-
+// 
 var gulp         = require('gulp');
     cp           = require('child_process'),
     del          = require('del'),
@@ -11,6 +11,7 @@ var gulp         = require('gulp');
     plumber      = require('gulp-plumber'),
     notify       = require('gulp-notify'),
     sass         = require('gulp-sass'),
+    fontmin      = require('gulp-fontmin'),
     neat         = require('node-neat').includePaths,
     normalize    = require('node-normalize-scss').includePaths,
     sequence     = require('gulp-sequence').use(gulp),
@@ -19,15 +20,18 @@ var gulp         = require('gulp');
     inject       = require('gulp-inject'),
     cheerio      = require('gulp-cheerio'),
     svgSprite    = require('gulp-svg-sprite'),
+    spritesmith  = require('gulp.spritesmith'),
     svg2png      = require('gulp-svg2png'),
     imagemin     = require('gulp-imagemin'),
     jshint       = require('gulp-jshint'),
     uglify       = require('gulp-uglify'),
-    teste        = require('path'),
+    path        = require('path'),
     bundler      = process.platform === 'win32' ? 'bundle.bat' : 'bundle',
     assets       = { src: '_assets/', dest: 'assets/' };
     includes     = { dest: '_includes/' };
+
 var svg          = { sprite_svg: require('gulp-svg-sprite'), svg2png: require('gulp-svg2png') }
+
 var paths        = {
     img: {
         src:  assets.src + 'img/',
@@ -37,8 +41,14 @@ var paths        = {
         src:  assets.src + 'js/',
         dest: assets.dest + 'js/'
     },
+    font: {
+        src:  assets.src + 'font/',
+        dest: assets.dest + 'font/'
+    },
     scss: {
-        src:  assets.src + 'scss/',
+        src:  assets.src + 'scss/'
+    },
+    css: {
         dest: assets.dest + 'css/'
     },
     svg: {
@@ -57,9 +67,9 @@ var paths        = {
 // ============= SERVER BUILDINGS ============= //
 
 gulp.task('default', ['browser-sync', 'watch']);
-gulp.task('build', ['clean', 'img', 'styles', 'lint', 'scripts']);
-gulp.task('img', sequence('svg_min_all', 'sprite_svg', 'svg_inject', 'svg_min_build', 'svg_png', 'images'));
+gulp.task('img', sequence('svg_min_all', 'sprite_svg', 'svg_inject', 'svg_min_build', 'svg_png', 'sprite_img', 'images'));
 gulp.task('scripts', ['scripts:vendor', 'scripts:plugins']);
+gulp.task('build', ['clean', 'img', 'font', 'styles', 'lint', 'scripts']);
 
 // ============= //
 
@@ -120,7 +130,7 @@ gulp.task('svg_min_build', function () {
     return gulp.src(paths.svg.src + '**/*.svg')
         .pipe(plumber({errorHandler: onError}))
         .pipe(svgmin(function (file) {
-            var prefix = teste.basename(file.relative, teste.extname(file.relative));
+            var prefix = path.basename(file.relative, path.extname(file.relative));
             return {
                 plugins: [{
                     cleanupIDs: {
@@ -175,7 +185,7 @@ gulp.task('sprite_svg', function () {
                     render: {
                         scss: {
                             dest: paths.svg.css,
-                            template: paths.templates.svg + '_sprite-tpl.scss'
+                            template: paths.templates.svg + '_svg-tpl.scss'
                         }
                     }
                 }
@@ -193,9 +203,22 @@ gulp.task('svg_png', function() {
         .pipe(gulp.dest(paths.img.src));
 });
 
+// Sprite Images
+gulp.task('sprite_img', function () {
+    var data = gulp.src(paths.img.src + 'sprite/*.png')
+        .pipe(spritesmith({
+            imgName: 'sprite-img.png',
+            imgPath: '../img/sprite-img.png',
+            cssName: '_sprite_img.scss'
+            // cssTemplate: paths.templates.svg + '_img-tpl.handlebars'
+        }));
+    data.img.pipe(gulp.dest(paths.img.src));
+    data.css.pipe(gulp.dest(paths.scss.src + 'helpers/'));
+});
+
 // Minify Images
 gulp.task('images', function () {
-    return gulp.src(paths.img.src + '**/**/*')
+    return gulp.src(paths.img.src + '**/**/**/*')
         .pipe(plumber({errorHandler: onError}))
         .pipe(imagemin({
             progressive: true
@@ -215,7 +238,14 @@ gulp.task('styles', function () {
             includePaths: [].concat(normalize, neat),
             outputStyle: 'compressed'
         }))
-        .pipe(gulp.dest(paths.scss.dest));
+        .pipe(gulp.dest(paths.css.dest));
+});
+
+// Fontface Generate
+gulp.task('font', function () {
+    return gulp.src(paths.font.src + '*.ttf')
+        .pipe(fontmin())
+        .pipe(gulp.dest(paths.font.dest));
 });
 
 // Lint scripts

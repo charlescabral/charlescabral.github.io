@@ -4,7 +4,7 @@ html {
 
 body {
   @include fs-body;
-  background-color: $c-black;
+  background-color: $c-light-primary;
   color: $base-font-color;
   font-family: $base-font-family;
   overflow-x: hidden;

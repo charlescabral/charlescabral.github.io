@@ -16,7 +16,7 @@ animation: 'easeInOutQuin'
 # Images
 
 logo: 'logo.svg'
-avatar: 'travitar.jpg'
+avatar: 'layout/travitar.jpg'
 
 # Colors
 
