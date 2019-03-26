@@ -103,7 +103,7 @@ gulp.task('watch', ['jekyll', 'serve'], function () {
 // Browser Sync
 gulp.task('browser-sync', ['jekyll', 'serve'], function() {
     browser_sync({
-        server: { baseDir: '_site' }
+        server: { baseDir: './_site' }
     });
 });
 

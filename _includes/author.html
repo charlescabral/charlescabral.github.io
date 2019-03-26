@@ -1,10 +1,10 @@
 <section class="author {{include.position}}">
-  <a href="{{ site.url }}/about/" class="author__avatar">
-    <span class="image">
-      <img src="/assets/img/{{ site.data.settings.owner.avatar }}" alt="{{ site.data.settings.owner.name }} avatar">  
-    </span>
-    <h2 class="name" itemprop="author">{{ site.data.settings.owner.name }}</h2>
-    <p class="bio">{{ site.data.settings.owner.bio }}</p>
-    {% include social.html position='menu-side' %}
-  </a>
+	<a href="{{ site.url }}/about/" class="author__avatar">
+		<span class="image">
+			<img src="/assets/img/{{ site.data.settings.owner.avatar }}" alt="{{ site.data.settings.owner.name }} avatar">  
+		</span>
+		<h2 class="name" itemprop="author">{{ site.data.settings.owner.name }}</h2>
+		<p class="bio">{{ site.data.settings.owner.bio }}</p>
+		{% include social.html position='menu-side' %}
+	</a>
 </section>

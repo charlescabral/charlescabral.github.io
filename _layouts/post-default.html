@@ -4,88 +4,89 @@ layout: default
 
 <div class="container-full article">
 
-    <header class="header article header-post">
-        <div class="container">
-        	<h1 class="title">{{ page.title }}</h1>
+	<header class="header article header-post">
+		<div class="container">
+			<h1 class="title">{{ page.title }}</h1>
 			<h2 class="subtitle">{{ page.date | date: "%d %b %Y" }}</h2>
-        </div>
-        <a href="article-entry" class="scroll-to arrow-down">
-        	<svg class="ico"><use xlink:href="#arrow-down"></use></svg>
-        </a>
-    </header>
-    
-	<div id="article-entry" class="article-entry"> 
+		</div>
+		<a href="article-entry" class="scroll-to arrow-down">
+			<svg class="ico"><use xlink:href="#arrow-down"></use></svg>
+		</a>
+	</header>
+
+	<div id="article-entry" class="article-entry">
 
 
-	        <div class="content">
-				{{content}}
-			</div>
+		<div class="content">
+			{{content}}
+		</div>
+
 		<br>
+
 		<a href="{{page.source}}">Source</a>
 
+		<br>
+
+		{% if page.path contains '_posts' and page.tags %}
+			<div class="post__taxonomy">
+				{% include taxonomy.html %}
+			</div>
+		{% endif %}
 
 		<br>
-		{% if page.path contains '_posts' and page.tags %}
-		    <div class="post__taxonomy">
-		      {% include taxonomy.html %}
-		    </div>
-	    {% endif %}
 
-	    <br>
-			
 		{% include sharing.html %}
-		
+
 		{% if page.path contains '_posts' and site.related_posts.size >= 3 %}
 			<div class="related">
-			  <h2>Related Posts</h2>
-			  <ul class="related-posts">
-			    {% for post in site.related_posts limit:4 %}
-			      <li>
-			        <h3>
-			          <a href="{{ site.baseurl }}{{ post.url }}">
-			            {{ post.title }}
-			            <small>{{ post.date | date_to_string }}</small>
-			          </a>
-			        </h3>
-			      </li>
-			    {% endfor %}
-			  </ul>
+				<h2>Related Posts</h2>
+				<ul class="related-posts">
+					{% for post in site.related_posts limit:4 %}
+						<li>
+							<h3>
+								<a href="{{ site.baseurl }}{{ post.url }}">
+									{{ post.title }}
+									<small>{{ post.date | date_to_string }}</small>
+								</a>
+							</h3>
+						</li>
+					{% endfor %}
+				</ul>
 			</div>
 		{% endif %}
 
 
-
 		{% if page.previous or page.next %}
-		<nav class="pagination">
-			{% if page.previous %}
-				<a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager hint--top" data-hover="{{ page.previous.title | markdownify | strip_html }}" title="{{ page.previous.title | markdownify | strip_html }}">
-					previous
-				</a>
-			{% else %}
-				<a href="#" class="pagination--pager disabled">
-					previous
-				</a>
-			{% endif %}
-			{% if page.next %}
-				<a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager hint--top" data-hover="{{ page.next.title | markdownify | strip_html }}" title="{{ page.next.title | markdownify | strip_html }}">
-					next
-				</a>
-			{% else %}
-				<a href="#" class="pagination--pager disabled">
-					next
-				</a>
-			{% endif %}
-		</nav>
+			<nav class="pagination">
+				{% if page.previous %}
+					<a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager hint--top" data-hover="{{ page.previous.title | markdownify | strip_html }}" title="{{ page.previous.title | markdownify | strip_html }}">
+						previous
+					</a>
+				{% else %}
+					<a href="#" class="pagination--pager disabled">
+						previous
+					</a>
+				{% endif %}
+				{% if page.next %}
+					<a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager hint--top" data-hover="{{ page.next.title | markdownify | strip_html }}" title="{{ page.next.title | markdownify | strip_html }}">
+						next
+					</a>
+				{% else %}
+					<a href="#" class="pagination--pager disabled">
+						next
+					</a>
+				{% endif %}
+			</nav>
 		{% endif %}
 		<br>
 	</div>
 
 	<footer class="post__footer container">
-	  {% include author.html %}
+		{% include author.html %}
 	</footer>
 
 
-	<div class="container">
-	  {% include comments.html %}
-	</div>
+	<!-- <div class="container">
+		{% include comments.html %}
+	</div> -->
 </div>

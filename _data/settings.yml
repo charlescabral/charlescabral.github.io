@@ -13,7 +13,7 @@ owner:
 
 #-------------------------------
 # About Section
-skills:  
+skills:
 - {name: Communication, value: '9'}
 - {name: Organization, value: '7'}
 - {name: Learning, value: '10'}
@@ -22,6 +22,7 @@ skills:
 - {name: Visual Design, value: '10'}
 - {name: UX Design, value: '8'}
 - {name: Programming, value: '6'}
+- {name: Javascript, value: '8'}
 #-------------------------------
 
 
@@ -30,7 +31,7 @@ skills:
 #-------------------------------
 # Projects
 projects:
-  path: '/assets/img/projects/' 
+  path: '/assets/img/projects/'
 # - title: Webdesign
 #   folder: web
 
@@ -48,5 +49,5 @@ projects:
   # analytics: UA-2011187-1
   # plus: https://plus.google.com/+MichaelRoseDesign/posts
   # verify: geapSKtvpBNDSfXVmF09E9CnaHGglbO61r4XgLZtEmo
-  
+
 
