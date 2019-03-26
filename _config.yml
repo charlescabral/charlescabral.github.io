@@ -5,13 +5,13 @@ encoding:    UTF-8
 timezone:    America/Sao_Paulo
 
 title:       "Made Mistakes"
-description: "Personal website of designer slash illustrator Michael Rose."
+description: "Personal website of developer and webdesigner Charles Cabral."
 teaser:      default-teaser.png
 logo:        site-logo.png
 color:       '#2C2C2C'
 locale:      pt
 
-include: 
+include:
   - _pages
 
 exclude:
@@ -25,7 +25,7 @@ exclude:
   - CNAME
   - Gemfile.lock
   - .npmignore
-  
+
 permalink: /blog/:title/
 
 collections:
