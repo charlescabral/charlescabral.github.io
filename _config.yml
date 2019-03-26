@@ -4,7 +4,7 @@ baseurl:     ''
 encoding:    UTF-8
 timezone:    America/Sao_Paulo
 
-title:       "Made Mistakes"
+title:       "Portifolio Personal"
 description: "Personal website of developer and webdesigner Charles Cabral."
 teaser:      default-teaser.png
 logo:        site-logo.png
@@ -25,13 +25,6 @@ exclude:
   - CNAME
   - Gemfile.lock
   - .npmignore
-
-permalink: /blog/:title/
-
-collections:
-  projects:
-    output: true
-    permalink: /:path/
 
 compress_html:
   clippings: all
