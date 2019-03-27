@@ -1,46 +1,25 @@
 {
-  "name": "charlescabral.in",
+  "name": "charlescabral.github.io",
   "version": "1.0.0",
-  "description": "Workflow jekyll site",
-  "author": "Charles Cabral",
-  "url": "https://github.com/charlescabral/",
-  "title": "Charles Cabral",
-  "contributors": [
-    {
-      "name": "Charles Cabral",
-      "email": "charles.cabral[at]gmail.com"
-    }
-  ],
-  "main": "gulpfile.js",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.14.0",
-    "del": "^2.2.1",
-    "express": "^4.14.0",
-    "gulp": "^3.9.1",
-    "gulp-cheerio": "^0.6.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-imagemin": "^3.0.2",
-    "gulp-inject": "^4.1.0",
-    "gulp-jshint": "^2.0.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-sequence": "^0.4.5",
-    "gulp-shell": "^0.5.2",
-    "gulp-svg-sprite": "^1.3.3",
-    "gulp-svg2png": "^2.0.0",
-    "gulp-svgmin": "^1.2.2",
-    "gulp-svgstore": "^6.0.0",
-    "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.7",
-    "jshint": "^2.9.2",
-    "node-bourbon": "^4.2.8",
-    "node-neat": "^1.7.2",
-    "node-normalize-scss": "^1.3.2"
+  "description": "Personal website, a static web built by Harp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "gulp-fontmin": "^0.7.4",
-    "gulp.spritesmith": "^6.2.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlescabral/charlescabral.github.io.git"
+  },
+  "keywords": [
+    "Harp",
+    "Portifolio",
+    "Personal",
+    "Blog"
+  ],
+  "author": "Charles Cabral",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlescabral/charlescabral.github.io/issues"
+  },
+  "homepage": "https://github.com/charlescabral/charlescabral.github.io#readme"
 }

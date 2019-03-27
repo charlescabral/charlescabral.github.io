@@ -1,0 +1,61 @@
+$c-black: #333;
+$c-white: #FFF;
+$c-green: #b3e27c;
+$c-gray: #464646;
+
+$f-heading: 'Merriweather', serif;
+$f-default: 'Work Sans', sans-serif;
+
+$space: 40px;
+
+
+body{
+  font-family: $f-default;
+  text-align: center;
+  padding: 50px 20px 0;
+  background: $c-black;
+  color: $c-white;
+  margin: $space*2 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $f-heading;
+  line-height: 2rem
+}
+
+h1{
+  font-size: 3em;
+  margin: 0;
+}
+
+
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  padding: 0 $space/4;
+}
+
+a {
+  color: $c-white;
+  text-decoration: none;
+
+  &:hover {
+    color: $c-green;
+  }
+}
+
+hr {
+  border-style: dashed;
+  border-width: .08rem;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $space 0;
+  border-color: $c-gray;
+}

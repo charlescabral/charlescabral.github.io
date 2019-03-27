@@ -39,10 +39,7 @@ Gemfile.lock
 /bower_components/
 /assets/bower/
 /node_modules/
-
-### Jekyll ###
-/_site/
-/_drafts/
+/www/
 
 ### Sass ###
 .sass-cache
