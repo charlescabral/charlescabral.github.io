@@ -1,0 +1,31 @@
+{
+  "globals":{
+    "title":"Charles Cabral - Front-end Developer",
+    "description":"I’m Charles a front-end developer website designer based in São Paulo / BR",
+    "url":"https://charlescabral.com/",
+    "author":"Charles Cabral",
+    "copyright":"Copyright-Free Charles Cabral 2019.",
+    "email":"charles.cabral.neto@gmail.com",
+    "about":"Front-end Developer & UI/UX Designer",
+    "skills":[
+      "Webdesign",
+      "Mobile First",
+      "Webstandarts"
+    ],
+    "networks":[
+      {
+        "site":"Linkedin",
+        "link":"https://www.linkedin.com/in/charlescabral/",
+        "icon":"fa-linkedin"
+      },
+      {
+        "site":"Github",
+        "link":"https://github.com/charlescabral",
+        "icon":"fa-github"
+      }
+    ],
+    "service": {
+      "analytics": "UA-XXXX"
+    }
+  }
+}

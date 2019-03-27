@@ -1,10 +1,13 @@
-h1
-    a(href="https://www.linkedin.com/in/charlescabral/", target="_blank", title="Ir pro meu Linkedin") CHARLES CABRAL
-h3 Front-end Developer & UI/UX Designer
+h1= author
+h3= about
 hr
 ul.topics
-    li Webdesign
-    li Mobile First
-    li Webstandarts
+  for skill in skills
+    li= skill
 hr
-a(href="mailto:charles.cabral.neto@gmail.com", title="Mandar email") charles.cabral.neto@gmail.com
+a(href="mailto:#{email}" title="Email me =)")= email
+ul.social
+  for social in networks
+    li
+      a(href=social.link, target="_blank")
+        i.fab(aria-hidden='true' class=social.icon title=social.site)

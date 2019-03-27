@@ -6,7 +6,7 @@ $c-gray: #464646;
 $f-heading: 'Merriweather', serif;
 $f-default: 'Work Sans', sans-serif;
 
-$space: 40px;
+$space: 3em;
 
 
 body{
@@ -15,20 +15,23 @@ body{
   padding: 50px 20px 0;
   background: $c-black;
   color: $c-white;
-  margin: $space*2 0;
+  font-size: 1em;
+  margin: $space*2 0 0;
+  padding: $space/1.5 $space/2 0;
+
+  @media (max-width: 600px) {
+    font-size: .75em;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $f-heading;
-  line-height: 2rem
 }
 
 h1{
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 0;
 }
-
-
 
 ul, li {
   margin: 0;
@@ -58,4 +61,11 @@ hr {
   border-top: 0;
   margin: $space 0;
   border-color: $c-gray;
+}
+
+.social {
+  margin-top: $space/2;
+  .fab {
+    font-size: 28px;
+  }
 }

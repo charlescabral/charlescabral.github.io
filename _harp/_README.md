@@ -27,4 +27,3 @@ Github Page (for hosting from your GitHub repository)
 
 Merriweather (font)<https://fonts.google.com/specimen/Merriweather>
 Work Sans (font)<https://fonts.google.com/specimen/Work+Sans>
-
